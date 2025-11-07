@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Worl!</title>
+    <title>Portfolio Anna</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonty Google: Syne, Poppins, Bebas Neue -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <header id="header" class="site-header" role="banner" aria-label="Górny pasek">
@@ -16,7 +20,7 @@
     <a class="brand" href="/" aria-label="Logo (placeholder)">WESTERN&nbsp;UNION</a>
 
     <!-- menu -->
-    <nav class="site-nav" aria-label="Główne menu">
+    <nav class="site-nav button-text" aria-label="Główne menu">
       <ul class="menu" role="list">
         <li class="menu__item"><a href="#portfolio">PORTFOLIO</a></li>
         <li class="menu__item"><a href="#about">O&nbsp;MNIE</a></li>
@@ -27,16 +31,19 @@
 
   <!-- akcje w prawym panelu: KONTAKT + język -->
   <div class="site-actions" aria-label="Akcje">
-    <a class="btn btn--contact" href="#contact">KONTAKT</a>
-    <button class="lang-switch" type="button" aria-label="Zmień język">
-      POLSKI ⟷ ENG
-    </button>
-  </div>
+  <a class="btn btn--contact button-text" href="#contact">KONTAKT</a>
+
+  <button class="lang-switch" type="button" aria-label="Zmień język">
+    <span class="lang-label">POLSKI</span>
+    <span class="lang-icon" aria-hidden="true">⟷</span>
+  </button>
+</div>
 
   <!-- ikony na dole prawego panelu (placeholdery) -->
   <div class="header-socials" aria-label="Linki społecznościowe">
     <a href="#" aria-label="GitHub">GitHub</a>
     <a href="#" aria-label="LinkedIn">LinkedIn</a>
+  </div>
   </div>
 </header>
 </body>
