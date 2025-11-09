@@ -12,12 +12,13 @@
 
   --content-max: 1660px;
   --side-pad: 7.65vw;                 /* docelowy padding na stronę dla ~1440 */
-  --ref-half-gap: calc((100vw - 1220px)/2);
+  --ref-half-gap: calc((100vw - 1160px)/2);
 
   /* NOWE: padding kontenera i prawa krawędź treści */
   --container-pad: 16px;              /* domyślnie 16px */
   --edge-right: 16px;                  /* domyślnie 16px */
   --right-panel-w: min(26vw, 360px);
+  --edge-left: 16px;
 
 }
 
@@ -43,6 +44,18 @@
   :root{ --side-pad: 5vw; }
 }
 
+@media (max-width: 1660px){
+  :root{
+    --edge-left: var(--container-pad);
+  }
+}
+
+/* > 1660px – margin po bokach + 16px w środku */
+@media (min-width: 1661px){
+  :root{
+    --edge-left: calc((100vw - var(--content-max))/2 + 16px);
+  }
+}
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -195,7 +208,7 @@ h4 {
   text-decoration: none;
   line-height: 1;
 }
-.menu a:hover{ opacity: .8; }
+.menu a:hover{ color: var(--primary);}
 
 /* akcje w prawym panelu (góra): KONTAKT + przełącznik języka */
 .site-actions{
@@ -215,8 +228,20 @@ h4 {
   border-radius: 8px;
   text-decoration: none;
 }
-.btn--contact{ background: var(--primary); color: #fff; }
-.btn--contact:hover{ filter: brightness(0.96); }
+.btn--contact{
+  background-color: var(--secondary); /* np. #BFA2F7 */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(125, 95, 199, 0.5); /* z Figma: #7D5FC7 50% */
+  transition: 0.5s ;
+  border: 1px solid transparent;
+
+}
+.btn--contact:hover{ 
+  background: #fff; /* całkowicie białe tło */
+  color: var(--primary); /* tekst w kolorze primary */
+  border: 1px solid var(--primary); /* widoczny fioletowy stroke */
+  box-shadow: 0 0 12px rgba(125, 95, 199, 0.6);
+} 
 
 /* ZMIANA JĘZYKA */
 .lang-switch{
@@ -238,7 +263,7 @@ h4 {
   transition: color .2s ease;
 }
 .lang-switch:hover{
-  color: var(--secondary);
+  color: #fff;
 }
 .lang-icon{
   font-size: 18px;
@@ -267,4 +292,150 @@ h4 {
 /* tablet i niżej – delikatne zagęszczenie */
 @media (max-width: 1024px){
   .menu{ gap: 20px; }
+}
+
+
+
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;  /* <-- trzyma pion */
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr var(--right-panel-w);
+  align-items: end; /* zdjęcie do dołu */
+  width: 100%;
+  
+}
+
+.hero__copy { padding-top: clamp(16px, 3vw, 36px);
+  transform: translateY(-7vh);
+ }
+.hero__lead { max-width: 48vw; }
+
+.hero__media{
+    
+  position: absolute;
+  bottom: 0;
+  right: 110px;               
+  margin: 0;
+}
+
+.hero__photo{
+  display: block;
+  height: 94vh; /* trzyma dół, skaluje proporcjonalnie */
+  width: auto;
+  object-fit: contain;     /* nie przytnie */
+}
+
+/* strzałka w dole po LEWEJ, wyrównana do krawędzi TREŚCI */
+.hero__scroll {
+  position: absolute;
+  left: var(--edge-left);
+  bottom: clamp(18px, 3vw, 32px);
+
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--bg-main);
+  border: 1px solid var(--primary);
+  box-shadow: 0 4px 12px rgba(125, 95, 199, .5);
+
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: var(--primary);
+  z-index: 2;
+}
+
+/* 🔽 samo SVG */
+.hero__scroll .hero__icon {
+  width: 22px;
+  height: 22px;
+  stroke: var(--primary);
+  stroke-width: 2.5;
+  fill: none; /* usuwa wypełnienie, zostaje tylko linia */
+}
+
+/* tablet i niżej – układ w kolumnie */
+@media (max-width: 1024px){
+  .hero__inner{
+    grid-template-columns: 1fr;
+  }
+  .hero__media{
+    justify-self: end;
+  }
+}
+
+.hero .accent-text{
+    margin-bottom: -6px;
+}
+
+.hero-bg-words {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;   /* przesunięcie o 40px w dół poza hero */
+  height: 50%;     /* wysokość zajmuje połowę sekcji hero */
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-bg-words img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 32%;
+  display: block;
+}
+
+
+
+
+/* ===== TOOLS STRIP ===== */
+.tools-strip {
+  background: var(--secondary);
+  height: 88px;
+  overflow: hidden;
+}
+
+.tools-strip__viewport {
+  overflow: hidden;
+  height: 100%;
+}
+
+.tools-strip__track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  list-style: none;
+  padding: 0 24px;
+  margin: 0;
+  height: 100%;
+  will-change: transform;
+}
+
+.tool-ic {
+  width: 40px;
+  height: 40px;
+  display: block;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.tool-ic:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* Responsywnie */
+@media (max-width: 1024px) {
+  .tools-strip { height: 72px; }
+  .tools-strip__track { gap: 56px; }
+  .tool-ic { width: 32px; height: 32px; }
 }
