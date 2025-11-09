@@ -396,46 +396,57 @@ h4 {
 
 
 
-
-/* ===== TOOLS STRIP ===== */
-.tools-strip {
+/* ===== TOOLS STRIP (scoped) ===== */
+.tools-strip{
   background: var(--secondary);
   height: 88px;
   overflow: hidden;
 }
 
-.tools-strip__viewport {
-  overflow: hidden;
+.tools-strip .tools-strip__viewport{
+  position: relative;
   height: 100%;
+  overflow: hidden;
+  padding: 0 24px;        /* padding przeniesiony z tracka */
 }
 
-.tools-strip__track {
-  display: flex;
+.tools-strip .tools-strip__track{
+  position: absolute;     /* dotyczy tylko tej sekcji */
+  left: 0; top: 0;
+  display: inline-flex;
   align-items: center;
   gap: 80px;
   list-style: none;
-  padding: 0 24px;
   margin: 0;
+  padding: 0;             /* ważne: bez paddingu na tracku */
   height: 100%;
+  white-space: nowrap;
   will-change: transform;
 }
 
-.tool-ic {
+.tool-ic{
   width: 40px;
   height: 40px;
   display: block;
-  opacity: 0.9;
-  transition: transform 0.3s ease;
+  opacity: .9;
+  transition: transform .3s ease;
+}
+.tool-ic:hover{ transform: scale(1.15); opacity: 1; }
+
+@media (max-width: 1024px){
+  .tools-strip{ height: 72px; }
+  .tools-strip .tools-strip__track{ gap: 56px; }
+  .tool-ic{ width: 32px; height: 32px; }
 }
 
-.tool-ic:hover {
-  transform: scale(1.15);
-  opacity: 1;
+/* U góry masz gap: 80px — więc: */
+.tools-strip .tools-strip__track > li:last-child {
+  margin-right: 80px;
 }
 
-/* Responsywnie */
-@media (max-width: 1024px) {
-  .tools-strip { height: 72px; }
-  .tools-strip__track { gap: 56px; }
-  .tool-ic { width: 32px; height: 32px; }
+/* I pamiętaj o wersji responsywnej, gdzie gap = 56px: */
+@media (max-width: 1024px){
+  .tools-strip .tools-strip__track > li:last-child {
+    margin-right: 56px;
+  }
 }
