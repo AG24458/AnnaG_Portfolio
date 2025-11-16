@@ -233,7 +233,7 @@ h4 {
   text-decoration: none;
 }
 .btn--contact{
-  background-color: var(--secondary); /* np. #BFA2F7 */
+  background-color: var(--primary); /* np. #BFA2F7 */
   color: #fff;
   box-shadow: 0 4px 12px rgba(125, 95, 199, 0.5); /* z Figma: #7D5FC7 50% */
   transition: 0.5s ;
@@ -594,7 +594,7 @@ h4 {
   position: relative;
   /* lekki overlap na kafelki powyżej */
   margin-top: -60px;                /* ile „najeżdża” na portfolio */
-  padding: 220px 4px;             /* większy top padding, by skompensować overlap */
+  padding: 220px 4px 320px;             /* większy top padding, by skompensować overlap */
   background: var(--bg-dark);              /* ciemne tło */
   color: var(--bg-light);
   z-index: -1;                        /* nad tłem portfolio */
@@ -781,6 +781,237 @@ h4 {
 @media (max-width: 980px) {
   .about__skills { grid-template-columns: 1fr; }
   .skills__col:not(:last-child)::after { display: none; }
+}
+
+
+
+
+/* ===== KONTAKT ===== */
+
+.contact{
+  padding:0 0 120px;
+  margin-top: -140px;
+}
+
+.contact__card{
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  border-radius: 32px;
+  overflow: hidden;
+  background: rgba(187, 189, 242, 0.8);         /* #BBBDF2 80% */
+  box-shadow: 0 0 28px rgba(125,95,199,0.35);   /* jak z Figma (7D5FC7 / 35%) */
+  backdrop-filter: blur(20px);                  /* background blur 20 */
+}
+
+/* LEWA STRONA */
+
+.contact__left{
+  padding: 40px 180px 44px 60px;
+}
+
+.contact__title{
+  margin: 0 0 12px;
+  color: var(--bg-light);
+}
+
+.contact__lead{
+  margin: 0 0 28px;
+  max-width: 100%;
+  color: #fff;
+    font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.contact__form{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 98%;
+}
+
+/* ===== Floating Labels dla contact__field ===== */
+
+.contact__field {
+  position: relative;
+  display: block;
+}
+
+.contact__field input,
+.contact__field textarea {
+  width: 98%;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--primary);
+  background: var(--bg-light);
+  color: var(--text);
+  outline: none;
+  transition: border .25s, background .25s;
+}
+
+/* textarea większy radius */
+.contact__field--textarea textarea {
+  min-height: 32px;
+  align-items: start;
+}
+
+/* label wewnątrz pola */
+.contact__label {
+  position: absolute;
+  left: 14px;
+  font-size: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--grey);
+  pointer-events: none;
+  transition: .25s ease;
+}
+
+/* aktywacja — przenoszenie labelu */
+.contact__field input:focus + .contact__label,
+.contact__field textarea:focus + .contact__label,
+.contact__field input:not(:placeholder-shown) + .contact__label,
+.contact__field textarea:not(:placeholder-shown) + .contact__label {
+  
+  opacity: 0;
+}
+
+/* Fokus */
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: var(--secondary);
+  background: rgba(255,255,255,0.04);
+}
+
+
+/* zgoda */
+
+.contact__consent{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.9);
+}
+
+.contact__consent input{
+  margin-top: 2px;
+}
+
+.contact__actions{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.contact__btn{
+  padding: 8px 104px;
+  border-radius: 8px;
+ justify-content: flex-end;
+  text-decoration: none;
+    background-color: var(--primary); /* np. #BFA2F7 */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(125, 95, 199, 0.5); /* z Figma: #7D5FC7 50% */
+  transition: 0.5s ;
+  border: 1px solid transparent;
+}
+
+.contact__btn:hover{ 
+  background: #fff; /* całkowicie białe tło */
+  color: var(--primary); /* tekst w kolorze primary */
+  border: 1px solid var(--primary); /* widoczny fioletowy stroke */
+  box-shadow: 0 0 12px rgba(125, 95, 199, 0.6);}
+
+/* komunikat po wysłaniu */
+
+.form-msg{
+  font-size: 13px;
+  min-height: 1.2em;
+}
+
+.form-msg.--ok{
+  color: #7CFF9A;
+}
+
+.form-msg.--err{
+  color: #FF6B81;
+}
+
+/* PRAWA STRONA – PANEL INFO */
+
+.contact__right{
+  align-items: center;
+  position: relative;
+  background: var(--secondary); /* jasny pasek w tle */
+  display: flex;
+  margin-left: 60px;
+  color: #fff;
+}
+
+.contact__info{
+  position: absolute;
+  background: var(--primary);   /* wewnętrzny panel */
+  margin: 36px 36px 36px -120px;
+  border-radius: 24px 0 0 24px;
+  padding: 42px 48px 48px;
+  width: 140%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__info-title{
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contact__info-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact__info-list li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact__info-icon img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(12%) saturate(880%) hue-rotate(205deg);
+}
+
+.contact__info-text {
+color: #fff; }
+
+
+/* RWD */
+
+@media (max-width: 1100px){
+  .contact__card{
+    grid-template-columns: 1fr;
+  }
+  .contact__right{
+    order: -1;         /* Info nad formularzem na mobile, zmień na 1 jeśli ma być pod */
+  }
+  .contact__left{
+    padding: 32px 24px 36px;
+  }
+  .contact__info{
+    margin: 24px;
+    border-radius: 24px;
+  }
 }
 
 

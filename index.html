@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Fonty Google: Syne, Poppins, Bebas Neue -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+    (function(){
+    emailjs.init("rymyCY12LqUD6Q2L_"); // <-- Twój USER ID
+    })();
+    </script>
 
 </head>
 <body>
@@ -296,72 +303,83 @@
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact__card">
-      <div class="contact__strip"></div>
+     <!-- LEWA STRONA – FORMULARZ -->
+<div class="contact__left">
+  <h2 class="contact__title">Skontaktuj się</h2>
+  <p class="contact__lead">
+    Jeżeli masz dodatkowe pytania lub chciałabyś/chciałbyś porozmawiać o&nbsp;współpracy,
+    zapraszam do kontaktu.
+  </p>
 
-      <div class="contact__grid">
-        <!-- FORM -->
-        <form id="contactForm" novalidate>
-          <h2 class="contact__title">Skontaktuj się</h2>
+  <form id="contactForm" class="contact__form">
 
-          <p class="contact__lead">
-            Jeżeli masz dodatkowe pytania lub chcesz porozmawiać o współpracy, zapraszam do kontaktu.
-          </p>
+    <label class="contact__field">
+      <input type="text" name="name" placeholder=" " required>
+      <span class="contact__label">Imię</span>
+    </label>
 
-          <hr class="contact__rule"/>
+    <label class="contact__field">
+      <input type="email" name="email" placeholder=" " required>
+      <span class="contact__label">Adres e-mail</span>
+    </label>
 
-          <label class="field">
-            <span>Imię</span>
-            <input type="text" name="name" placeholder="Imię…" required />
-          </label>
+    <label class="contact__field">
+      <input type="tel" name="phone" placeholder=" " inputmode="tel">
+      <span class="contact__label">Nr telefonu</span>
+    </label>
 
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" placeholder="np. anna@mail.com" required />
-          </label>
+    <label class="contact__field contact__field--textarea">
+      <textarea name="message" rows="3" placeholder=" " required></textarea>
+      <span class="contact__label">Wiadomość</span>
+    </label>
 
-          <label class="field">
-            <span>Nr tel.</span>
-            <input type="tel" name="phone" inputmode="numeric" pattern="[0-9\s+-]*" placeholder="Tylko cyfry" />
-          </label>
+    <label class="contact__consent">
+      <input type="checkbox" name="consent" required>
+      <span>Wyrażam zgodę na kontakt drogą elektroniczną lub telefoniczną w&nbsp;celu
+        udzielenia odpowiedzi na&nbsp;przesłaną wiadomość.</span>
+    </label>
 
-          <label class="check">
-            <input type="checkbox" name="consent" required />
-            <span>Wyrażam zgodę na kontakt drogą elektroniczną lub telefoniczną w celu udzielenia odpowiedzi na przesłaną wiadomość.</span>
-          </label>
+    <div class="contact__actions">
+      <button type="submit" class="btn btn--primary contact__btn">
+        Wyślij
+      </button>
+      <p id="formMsg" class="form-msg" aria-live="polite"></p>
+    </div>
 
-          <button class="btn btn--send" type="submit">Wyślij</button>
+  </form>
+</div>
 
-          <!-- komunikaty -->
-          <div id="formMsg" class="form-msg" aria-live="polite"></div>
-        </form>
+      <!-- PRAWA STRONA – PANEL INFO -->
+      <aside class="contact__right">
+        <div class="contact__info">
+          <h3 class="contact__info-title">Info</h3>
 
-        <!-- INFO PANEL -->
-        <aside class="contact__info">
-          <h3>Info</h3>
-          <ul>
+          <ul class="contact__info-list">
             <li>
-              <span class="ci ci-phone"></span>
-              <a href="tel:535635190">535 635 190</a>
+             <span class="contact__info-icon"><img src="img/icons/phone.svg" alt=""></span>
+              <p class="contact__info-text">535 635 190</p>
             </li>
             <li>
-              <span class="ci ci-mail"></span>
-              <a href="mailto:annag.design@gmail.com">annag.design@gmail.com</a>
+              <span class="contact__info-icon"><img src="img/icons/email.svg" alt=""></span>
+              <p class="contact__info-text">annag.design@gmail.com</p>
             </li>
             <li>
-              <span class="ci ci-time"></span>
-              10:00–21:00
+              <span class="contact__info-icon"><img src="img/icons/time.svg" alt=""></span>
+              <p class="contact__info-text">10:00 – 21:00</p>
             </li>
           </ul>
-        </aside>
-      </div>
+        </div>
+      </aside>
     </div>
   </div>
 </section>
 
-<div>
-  testowo
-  
-</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("jvHLvKdzLZ58dfz3p"); /* Mój PUBLIC KEY */
+</script>
+
+<script src="js/contact.js"></script>
 
 
 
