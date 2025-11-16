@@ -848,7 +848,7 @@ h4 {
   background: var(--bg-light);
   color: var(--text);
   outline: none;
-  transition: border .25s, background .25s;
+  transition: border .25s;
 }
 
 /* textarea większy radius */
