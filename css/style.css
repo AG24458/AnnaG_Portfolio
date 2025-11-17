@@ -11,55 +11,50 @@
   --accent-light:#C5C8D9;
 
   --content-max: 1660px;
-  --side-pad: 7.65vw;                 /* docelowy padding na stronę dla ~1440 */
-  --ref-half-gap: calc((100vw - 1160px)/2);
 
-  /* NOWE: padding kontenera i prawa krawędź treści */
-  --container-pad: 16px;              /* domyślnie 16px */
-  --edge-right: 16px;                  /* domyślnie 16px */
+  /* stały desktopowy padding zamiast rosnącego do 200px */
+  --container-pad: 80px;
+
+  /* krawędzie domyślnie równe paddingowi kontenera */
+  --edge-left: var(--container-pad);
+  --edge-right: var(--container-pad);
+
   --right-panel-w: min(26vw, 360px);
-  --edge-left: 16px;
-
 
   --shadow: rgba(125,95,199,.5); /* #7D5FC7 50% */
-
-
 }
 
-
-/* ≤ 1660px – elastyczny padding; prawa krawędź = padding */
+/* ≤ 1660px – padding maleje na mniejszych ekranach, ale bez chorych wartości */
 @media (max-width: 1660px){
   :root{
-    --container-pad: clamp(16px, var(--side-pad), var(--ref-half-gap));
+    /* trochę mniejszy padding przy zwężaniu okna */
+    --container-pad: clamp(24px, 6vw, 80px);
+    --edge-left: var(--container-pad);
     --edge-right: var(--container-pad);
   }
 }
 
-/* > 1660px – treść stałe 16px, edge liczymy z marginesu po bokach */
+/* > 1660px – treść max 1660px, stałe 80px od krawędzi treści */
 @media (min-width: 1661px){
   :root{
-    --container-pad: 16px;
-    --edge-right: calc((100vw - var(--content-max))/2 + 16px);
+    /* zostaje 80px – nie wracamy do 16px */
+    --container-pad: 80px;
+
+    /* krawędź treści = środkowanie 1660 + padding kontenera */
+    --edge-right: calc((100vw - var(--content-max))/2 + var(--container-pad));
+    --edge-left: calc((100vw - var(--content-max))/2 + var(--container-pad));
   }
 }
 
-/* tablet i mniejsze – ciaśniejsze boczki (jak chcesz) */
+/* tablet i mniejsze – ciaśniejsze boczki */
 @media (max-width: 1024px){
-  :root{ --side-pad: 5vw; }
-}
-
-@media (max-width: 1660px){
   :root{
+    --container-pad: 24px;
     --edge-left: var(--container-pad);
+    --edge-right: var(--container-pad);
   }
 }
 
-/* > 1660px – margin po bokach + 16px w środku */
-@media (min-width: 1661px){
-  :root{
-    --edge-left: calc((100vw - var(--content-max))/2 + 16px);
-  }
-}
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -365,6 +360,38 @@ h4 {
   fill: none; /* usuwa wypełnienie, zostaje tylko linia */
 }
 
+/* większe inny odstęp */
+@media (min-width: 1800px){
+  .hero__media{
+  right: 160px;               
+  }
+  .hero__copy{
+    max-width: 70%;
+  }
+}
+
+/* większe inny odstęp */
+@media (min-width: 1920px){
+  .hero__media{
+  right: 260px;               
+  }
+  .site-header__side {
+    min-width: 500px;
+  }
+}
+
+/* większe inny odstęp */
+@media (min-width: 2100px){
+  .hero__media{
+  right: 340px;               
+  }
+  .site-header__side {
+    min-width: 600px;
+  }
+}
+
+
+
 /* tablet i niżej – układ w kolumnie */
 @media (max-width: 1024px){
   .hero__inner{
@@ -374,6 +401,7 @@ h4 {
     justify-self: end;
   }
 }
+
 
 .hero .accent-text{
     margin-bottom: -6px;
