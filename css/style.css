@@ -159,7 +159,7 @@ h4 {
 /* ===== HEADER (100vh) ===== */
 .site-header{
   position: relative;
-  min-height: 100vh;      /* pełna wysokość okna */
+  height: 100vh;      /* pełna wysokość okna */
   overflow: hidden;       /* nic nie wystaje poza sekcję */
 }
 
@@ -274,7 +274,7 @@ h4 {
       align-self: flex-end;
   position: absolute;
   right: var(--edge-right);
-  bottom: 28px;
+  bottom: 40px;
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -312,7 +312,7 @@ h4 {
 }
 
 .hero__copy { padding-top: clamp(16px, 3vw, 36px);
-  transform: translateY(-7vh);
+  transform: translateY(-6vh);
  }
 .hero__lead { max-width: 48vw; }
 
@@ -335,7 +335,7 @@ h4 {
 .hero__scroll {
   position: absolute;
   left: var(--edge-left);
-  bottom: clamp(18px, 3vw, 32px);
+  bottom: 40px;
 
   width: 62px;
   height: 62px;
@@ -363,10 +363,21 @@ h4 {
 /* większe inny odstęp */
 @media (min-width: 1800px){
   .hero__media{
-  right: 160px;               
+  right: 280px;               
   }
   .hero__copy{
-    max-width: 70%;
+    max-width: 72%;
+    transform: translateY(-14vh)
+  }
+  .site-header__side {
+    min-width: 500px;
+  }
+  .site-header{
+  height: 78vh;      /* pełna wysokość okna */
+}
+  .hero__photo{
+  display: block;
+  height: 72vh; /* trzyma dół, skaluje proporcjonalnie */
   }
 }
 
@@ -378,6 +389,13 @@ h4 {
   .site-header__side {
     min-width: 500px;
   }
+  .hero__copy{
+    max-width: 72%;
+    transform: translateY(-6vh)
+  }
+  .hero {
+  min-height: 72vh;
+}
 }
 
 /* większe inny odstęp */
@@ -817,7 +835,7 @@ h4 {
 /* ===== KONTAKT ===== */
 
 .contact{
-  padding:0 0 120px;
+  padding:0 0 168px;
   margin-top: -140px;
 }
 
@@ -1041,5 +1059,86 @@ color: #fff; }
     border-radius: 24px;
   }
 }
+
+
+
+
+.thumb-loops {
+  width: 100%;
+  padding: 24px 0PX 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-main);
+}
+
+.thumb-loop {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* CAŁA SEKCJA */
+.thumb-loops {
+  padding: 40px 0;
+}
+
+/* POJEDYNCZY RZĄD */
+.thumb-loop {
+  width: 100%;
+  overflow: hidden;         /* <<< to jest klucz */
+}
+
+/* TOR Z MINIATURAMI */
+.thumb-loop__track {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* KARTY */
+.thumb-loop__track li {
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #ddd;
+}
+
+/* OBRAZY */
+.thumb-loop__track li img {
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ANIMACJE */
+
+/* RZĄD 1 – w lewo, szybciej */
+.track-1 {
+  animation: scroll-left 750s linear infinite;
+}
+
+/* RZĄD 2 – w prawo, wolniej */
+.track-2 {
+  animation: scroll-right 900s linear infinite;
+}
+
+/* lewo */
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* prawo – odwrotnie */
+@keyframes scroll-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+
 
 
