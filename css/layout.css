@@ -1,0 +1,194 @@
+
+/* ===== HEADER (100vh) ===== */
+.site-header{
+  position: relative;
+  height: 100vh;      /* pełna wysokość okna */
+  overflow: hidden;       /* nic nie wystaje poza sekcję */
+}
+
+/* prawy, pionowy panel tła — full height, stała szerokość */
+.site-header__side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--right-panel-w, 340px);
+  height: 100vh;
+  background-color: rgba(187, 189, 242, 0.2); /* #BBBDF2 20% */
+  pointer-events: none; /* żeby nie blokowało kliknięć */
+  z-index: 0; /* niżej niż przycisk i treść */
+}
+
+/* górny pasek: logo (lewo) + menu (środek) */
+.header-top{
+  position: relative;
+  z-index: 2;              /* ponad tłem panelu */
+  display: grid;
+  grid-template-columns: auto 1fr;  /* logo | menu (środek) */
+  align-items: center;
+  padding-top: 24px;       /* dopasujemy później co do px */
+}
+
+/* logo (placeholder) */
+.brand{
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+/* menu wyśrodkowane optycznie */
+.site-nav{ justify-self: center; }
+.menu{
+  list-style: none;
+  display: flex;
+  gap: 32px;               /* odstęp między linkami — dopasujemy z Figmy */
+  margin: 0;
+  padding: 0;
+}
+.menu a{
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1;
+}
+.menu a:hover{ color: var(--primary);}
+
+/* akcje w prawym panelu (góra): KONTAKT + przełącznik języka */
+.site-actions{
+  position: absolute;
+  top: 24px;
+  right: var(--edge-right);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* przycisk KONTAKT */
+.btn{
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.btn--contact{
+  background-color: var(--primary); /* np. #BFA2F7 */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(125, 95, 199, 0.5); /* z Figma: #7D5FC7 50% */
+  transition: 0.5s ;
+  border: 1px solid transparent;
+
+}
+.btn--contact:hover{ 
+  background: #fff; /* całkowicie białe tło */
+  color: var(--primary); /* tekst w kolorze primary */
+  border: 1px solid var(--primary); /* widoczny fioletowy stroke */
+  box-shadow: 0 0 12px rgba(125, 95, 199, 0.6);
+} 
+
+/* ZMIANA JĘZYKA */
+.lang-switch{
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .2s ease;
+}
+.lang-switch:hover{
+  color: #fff;
+}
+.lang-icon{
+  font-size: 18px;
+  transform: translateY(1px);
+}
+
+/* ikony social (dół prawego panelu) */
+.header-socials{
+      align-self: flex-end;
+  position: absolute;
+  right: var(--edge-right);
+  bottom: 40px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header-socials a{
+      align-self: flex-end;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;        /* placeholder, później podmienimy na SVG */
+}
+
+/* tablet i niżej – delikatne zagęszczenie */
+@media (max-width: 1024px){
+  .menu{ gap: 20px; }
+}
+
+
+/* ===== TOOLS STRIP (scoped) ===== */
+.tools-strip{
+  background: var(--secondary);
+  height: 88px;
+  overflow: hidden;
+}
+
+.tools-strip .tools-strip__viewport{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 24px;        /* padding przeniesiony z tracka */
+}
+
+.tools-strip .tools-strip__track{
+  position: absolute;     /* dotyczy tylko tej sekcji */
+  left: 0; top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 80px;
+  list-style: none;
+  margin: 0;
+  padding: 0;             /* ważne: bez paddingu na tracku */
+  height: 100%;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.tool-ic{
+  width: 40px;
+  height: 40px;
+  display: block;
+  opacity: .9;
+  transition: transform .3s ease;
+}
+.tool-ic:hover{ transform: scale(1.15); opacity: 1; }
+
+@media (max-width: 1024px){
+  .tools-strip{ height: 72px; }
+  .tools-strip .tools-strip__track{ gap: 56px; }
+  .tool-ic{ width: 32px; height: 32px; }
+}
+
+/* U góry masz gap: 80px — więc: */
+.tools-strip .tools-strip__track > li:last-child {
+  margin-right: 80px;
+}
+
+/* I pamiętaj o wersji responsywnej, gdzie gap = 56px: */
+@media (max-width: 1024px){
+  .tools-strip .tools-strip__track > li:last-child {
+    margin-right: 56px;
+  }
+}
+

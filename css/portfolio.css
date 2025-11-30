@@ -1,0 +1,368 @@
+/* ============================================
+   HEADER – WERSJA PODSTRONY
+   ============================================ */
+
+.site-header--subpage {
+  height: auto;
+}
+
+/* ============================================
+   HERO PODSTRONY „WSZYSTKIE PROJEKTY”
+   ============================================ */
+
+.portfolio-hero {
+  padding-top: 132px;    /* od menu */
+  padding-bottom: 146px; /* do paska narzędzi */
+  background: var(--bg-main);
+}
+
+.portfolio-hero .accent-text {
+  margin-bottom: 8px;
+}
+
+.portfolio-hero h1 {
+  color: var(--secondary);
+  font-size: 72px;
+  line-height: 80px;
+  text-transform: uppercase;
+}
+
+/* breadcrumbs pod hero na jasnym tle */
+
+.breadcrumbs {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.breadcrumbs a {
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* ===== FIX: Prawy panel w podstronie portfolio ===== */
+.page-portfolio .site-header__side {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* ===== FIX: Pasek narzędzi o szerokości treści ===== */
+@media (min-width: 1025px) {
+  .page-portfolio .tools-strip {
+    margin-left: 0;
+    margin-right: var(--right-panel-w); /* tyle ma panel po prawej */
+  }
+}
+
+
+/* ============================================
+   SEKCJA LISTY PORTFOLIO – TŁO + BREADCRUMBS
+   ============================================ */
+
+.portfolio-list {
+  padding: 72px 0 120px;
+  background: var(--bg-dark); /* ciemne tło za boxami */
+}
+
+.portfolio-list .breadcrumbs {
+  margin: 0 0 32px;
+}
+
+
+/* ============================================
+   KATEGORIE GŁÓWNE (UI/UX, CYFROWE, DRUK)
+   ============================================ */
+
+/* sekcja jako kontekst pozycjonowania */
+.portfolio-section {
+  position: relative;
+}
+
+/* nagłówek UI/UX itd. */
+.portfolio-section h2 {
+  display: inline-block;           /* tło tylko pod tekstem */
+  top:-34px;
+  left: 40px;         /* wysunięcie na ramkę */
+  padding: 0 16px;                 /* „pasek” pod tekstem */
+  background: var(--bg-dark);      /* kolor pod tekstem */
+  color: var(--secondary);
+
+  position: absolute;
+  z-index: 2;                      /* nad ramką */
+}
+
+
+.section-lead {
+  margin: 0 0 32px;
+  max-width: 560px;
+  color: var(--grey);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+
+/* ============================================
+   BOX KATEGORII (ramka pod-subkategorie)
+   ============================================ */
+
+
+.portfolio-group {
+  margin-top: 160px;
+  position: relative;
+  z-index: 1;
+  border-radius: 24px;
+  border: 1px solid var(--secondary); /* tylko border */
+  box-shadow: none;                   /* bez cienia na dużym boxie */
+  padding: 82px 38px;
+  background: transparent;            /* kolor tła = bg-dark z sekcji */
+}
+
+#section-uiux {
+  margin-top: -80px !important;
+}
+
+/*#section-uiux h2 {
+  top: -120px !important;
+}*/
+
+/* odstęp między kolejnymi subkategoriami */
+.portfolio-row + .portfolio-row {
+  margin-top: 78px;
+}
+
+
+/* ============================================
+   NAGŁÓWEK SUBKATEGORII (np. Ulotki i katalogi)
+   ============================================ */
+
+.portfolio-row__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.portfolio-row__title {
+  color: var(--bg-light);
+}
+
+
+
+/* ============================================
+   NAWIGACJA SLIDERA (strzałki po prawej)
+   ============================================ */
+
+.slider-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.slider-nav__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid var(--primary);   /* obramowanie = primary */
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.slider-nav__btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--primary);
+  stroke-width: 2;
+  fill: none;
+}
+
+.slider-nav__btn:hover {
+  background: var(--primary);
+}
+
+.slider-nav__btn:hover svg {
+  stroke: #fff; /* strzałka biała na hover */
+}
+
+
+/* ============================================
+   TOR PROJEKTÓW – POZIOMY „SLIDER”
+   (brak widocznego scrollbara – później sterujesz JS)
+   ============================================ */
+
+.project-strip {
+  display: flex;
+  gap: 32px;                 /* odstępy między kafelkami */
+  overflow: hidden;          /* chowamy pasek przewijania */
+  padding: 14px 8px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+
+/* ============================================
+   KAFELKI PROJEKTÓW (BOXY)
+   ============================================ */
+
+.project-item {
+  flex: 0 0 calc((100% - 3 * 32px) / 4);  /* 4 karty w rzędzie na dużych */
+  max-width: 360px;
+
+  height: 282px;            /* stała wysokość karty */
+  background: var(--text);  /* kolor kart */
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  border: 1px solid #2B2B32;
+  box-shadow:
+    0 0px 12px #040404,
+    0 0px 14px rgba(38, 30, 60, 0.25);
+
+  scroll-snap-align: start;
+}
+
+
+/* ===== MINIATURA (196px + gradient) ===== */
+
+.project-thumb {
+  position: relative;
+  width: 100%;
+  height: 196px;          /* dokładnie 196px wysokości */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-thumb img {
+  width: 100%;
+  object-fit: cover;       /* zdjęcie wypełnia całą przestrzeń */
+  display: block;
+}
+
+/* gradient od dołu w kolorze boxa – do ok. 1/3 wysokości zdjęcia */
+.thumb-gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 54%;
+  background: linear-gradient(
+    to top,
+    var(--text) 0%, var(--text) 4%,
+    rgba(34,34,38,0.0) 100%
+  );
+  pointer-events: none;
+}
+
+
+/* ===== DÓŁ KARTY: TYTUŁ + STRZAŁKA OBOK ===== */
+
+.project-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-footer h4 {
+    height: 56px;
+}
+
+/* tytuł projektu – 2 linie + „...” */
+.project-name {
+  margin: 0;
+  color: var(--secondary);
+  max-width: 78%;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* przycisk-strzałka – 30x30, border primary, po prawej od tytułu */
+.project-card__cta {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.project-card__cta svg {
+  width: 14px;
+  height: 14px;
+  color: var(--bg-light);
+  pointer-events: none;
+}
+
+/* hover na boxie -> strzałka się wypełnia */
+.project-item:hover .project-card__cta {
+  background: transparent;
+  border: 2px solid var(--primary);
+  box-shadow: 0 4px 10px rgba(125,95,199,.7);
+  transform: translateY(-1px);
+}
+
+.project-item:hover .project-card__cta svg {
+  color: var(--primary);
+}
+
+
+/* ============================================
+   RWD – LICZBA KAFELKÓW W RZĘDZIE
+   ============================================ */
+
+@media (max-width: 1400px) {
+  .project-item {
+    flex: 0 0 calc((100% - 2 * 32px) / 3); /* 3 w rzędzie */
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio-group {
+    padding: 82px 38px 36px;
+  }
+
+  .project-item {
+    flex: 0 0 calc((100% - 32px) / 2);      /* 2 w rzędzie */
+    max-width: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-item {
+    flex: 0 0 100%;                          /* 1 na małych */
+    height: 260px;
+  }
+
+  .portfolio-row__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+
+
+

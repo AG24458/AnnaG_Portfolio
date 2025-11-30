@@ -1,0 +1,157 @@
+:root{
+  --bg-main:#EDEDF5;
+  --bg-dark:#1E1E1E;
+  --bg-light:#EBEDF2;
+
+  --text:#222226;
+  --grey:#9C9CA6;
+
+  --primary:#BFA2F7;
+  --secondary:#BBBDF2;
+  --accent-light:#C5C8D9;
+
+  --content-max: 1660px;
+
+  /* stały desktopowy padding zamiast rosnącego do 200px */
+  --container-pad: 80px;
+
+  /* krawędzie domyślnie równe paddingowi kontenera */
+  --edge-left: var(--container-pad);
+  --edge-right: var(--container-pad);
+
+  --right-panel-w: min(26vw, 360px);
+
+  --shadow: rgba(125,95,199,.5); /* #7D5FC7 50% */
+}
+
+/* ≤ 1660px – padding maleje na mniejszych ekranach, ale bez chorych wartości */
+@media (max-width: 1660px){
+  :root{
+    /* trochę mniejszy padding przy zwężaniu okna */
+    --container-pad: clamp(24px, 6vw, 80px);
+    --edge-left: var(--container-pad);
+    --edge-right: var(--container-pad);
+  }
+}
+
+/* > 1660px – treść max 1660px, stałe 80px od krawędzi treści */
+@media (min-width: 1661px){
+  :root{
+    /* zostaje 80px – nie wracamy do 16px */
+    --container-pad: 80px;
+
+    /* krawędź treści = środkowanie 1660 + padding kontenera */
+    --edge-right: calc((100vw - var(--content-max))/2 + var(--container-pad));
+    --edge-left: calc((100vw - var(--content-max))/2 + var(--container-pad));
+  }
+}
+
+/* tablet i mniejsze – ciaśniejsze boczki */
+@media (max-width: 1024px){
+  :root{
+    --container-pad: 24px;
+    --edge-left: var(--container-pad);
+    --edge-right: var(--container-pad);
+  }
+}
+
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Inter", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+  .container{
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+
+@media (max-width: 1024px) {
+  :root {
+    --side-pad: 5vw;
+  }
+}
+
+/* Ustawienia nagłóków i tekstow */
+
+h1, h2, h3, h4 {
+  margin: 0;
+  color: var(--text);
+  font-family: "Syne", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 82px;
+  line-height: 100px;
+  font-weight: 800; /* ExtraBold */
+}
+
+h2 {
+  font-size: 52px;
+  line-height: 68px;
+  font-weight: 700; /* Bold */
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 500; /* Medium */
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500; /* Medium */
+}
+
+/* ---------- Teksty główne ---------- */
+.main-text, p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400; /* Regular */
+  color: var(--text);
+}
+
+/* Mały tekst */
+.small-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.accent-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  line-height: 26.4px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+}
+
+.button-text, a {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+
+

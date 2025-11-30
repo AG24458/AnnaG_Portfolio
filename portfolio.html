@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio – Wszystkie projekty</title>
+
+  <!-- STYLE GLOBALNE -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- STYLE TYLKO DLA TEJ PODSTRONY -->
+  <link rel="stylesheet" href="css/portfolio.css">
+
+  <!-- FONTY -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-portfolio">
+
+
+  <!-- HEADER – jak na index, ale z klasą subpage (bez 100vh) -->
+  <header id="header" class="site-header site-header--subpage" role="banner">
+    <div class="site-header__side" aria-hidden="true"></div>
+
+    <div class="container header-top">
+      <a class="brand" href="index.html">WESTERN&nbsp;UNION</a>
+
+      <nav class="site-nav" aria-label="Główne menu">
+        <ul class="menu" role="list">
+          <li class="menu__item"><a href="portfolio.html">PORTFOLIO</a></li>
+          <li class="menu__item"><a href="index.html#about">O&nbsp;MNIE</a></li>
+          <li class="menu__item"><a href="index.html#offer">OFERTA</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="site-actions" aria-label="Akcje">
+      <a class="btn btn--contact button-text" href="index.html#contact">KONTAKT</a>
+
+      <button class="lang-switch" type="button" aria-label="Zmień język">
+        <span class="lang-label">POLSKI</span>
+        <span class="lang-icon" aria-hidden="true">⟷</span>
+      </button>
+    </div>
+
+    <div class="header-socials" aria-label="Linki społecznościowe">
+      <a href="#" aria-label="GitHub"><img src="img/github.svg" alt="github_logo_link"></a>
+      <a href="#" aria-label="LinkedIn"><img src="img/linkedin.svg" alt="linkedin_logo_link"></a>
+    </div>
+
+     <!-- HERO PODSTRONY PORTFOLIO -->
+    <section class="portfolio-hero">
+  <div class="container">
+    <p class="accent-text">| PORTFOLIO, Ui/UX, Projekty cyfrowe, Druk </p>
+    <h1>WSZYSTKIE<br>PROJEKTY</h1>
+
+  </div>
+    </section>
+      <section class="tools-strip" aria-label="Technologie i narzędzia">
+    <div class="tools-strip__viewport">
+      <ul class="tools-strip__track">
+        <li><img class="tool-ic" src="img/tools/adobe-pdf.svg" alt="Adobe Acrobat PDF logo"></li>
+        <li><img class="tool-ic" src="img/tools/chatgpt.svg" alt="ChatGPT logo"></li>
+        <li><img class="tool-ic" src="img/tools/css.svg" alt="CSS3 icon"></li>
+        <li><img class="tool-ic" src="img/tools/elementor.svg" alt="Elementor logo"></li>
+        <li><img class="tool-ic" src="img/tools/figma.svg" alt="Figma logo"></li>
+        <li><img class="tool-ic" src="img/tools/git.svg" alt="Git logo"></li>
+        <li><img class="tool-ic" src="img/tools/github.svg" alt="GitHub logo"></li>
+        <li><img class="tool-ic" src="img/tools/html.svg" alt="HTML5 logo"></li>
+        <li><img class="tool-ic" src="img/tools/illustrator.svg" alt="Adobe Illustrator logo"></li>
+        <li><img class="tool-ic" src="img/tools/indesign.svg" alt="Adobe InDesign logo"></li>
+        <li><img class="tool-ic" src="img/tools/javascript.svg" alt="JavaScript logo"></li>
+        <li><img class="tool-ic" src="img/tools/lightroom.svg" alt="Adobe Lightroom logo"></li>
+        <li><img class="tool-ic" src="img/tools/miro.svg" alt="Miro logo"></li>
+        <li><img class="tool-ic" src="img/tools/photoshop.svg" alt="Adobe Photoshop logo"></li>
+        <li><img class="tool-ic" src="img/tools/premiere.svg" alt="Adobe Premiere Pro logo"></li>
+        <li><img class="tool-ic" src="img/tools/react.svg" alt="React.js logo"></li>
+        <li><img class="tool-ic" src="img/tools/slack.svg" alt="Slack logo"></li>
+        <li><img class="tool-ic" src="img/tools/trello.svg" alt="Trello logo"></li>
+        <li><img class="tool-ic" src="img/tools/vscode.svg" alt="Visual Studio Code logo"></li>
+        <li><img class="tool-ic" src="img/tools/wordpress.svg" alt="WordPress logo"></li>
+        <li><img class="tool-ic" src="img/tools/xd.svg" alt="Adobe XD logo"></li>
+        <li><img class="tool-ic" src="img/tools/webflow.svg" alt="Webflow logo"></li>
+        <li><img class="tool-ic" src="img/tools/envato.svg" alt="Envato Elements logo"></li>
+      </ul>
+    </div>
+  </section>
+
+  </header>
+
+<section class="portfolio-list">
+  <div class="container">
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumbs" aria-label="Ścieżka nawigacji">
+      <a href="index.html">Strona główna</a> →
+      <span>Portfolio</span>
+    </nav>
+
+    <!-- ================= UI / UX ================= -->
+    <section id="section-uiux" class="portfolio-section" aria-labelledby="section-uiux">
+      <header class="portfolio-section__head">
+        <h2>UI / UX</h2>
+      </header>
+
+      <div class="portfolio-group">
+
+        <!-- RZĄD 1: Web Design -->
+        <article class="portfolio-row">
+          <header class="portfolio-row__head">
+            <h3 class="portfolio-row__title">Web Design</h3>
+
+            <div class="slider-nav" data-slider-nav="ui-web">
+              <button class="slider-nav__btn slider-nav__btn--prev" type="button" aria-label="Poprzednie projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 4l-8 8 8 8" />
+                </svg>
+              </button>
+              <button class="slider-nav__btn slider-nav__btn--next" type="button" aria-label="Następne projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 4l8 8-8 8" />
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="project-strip" data-slider="ui-web">
+            <!-- 5 KAFELKÓW (widać 4, 5. po przewinięciu) -->
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="Landing page – przykład 1">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Landing page – Akademia</h4>
+               <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="Strona główna platformy">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Strona główna platformy</h4>
+               <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="Dashboard sprzedażowy">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Dashboard sprzedażowy</h4>
+                 <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="Strona wydarzenia online">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Strona wydarzenia online</h4>
+                <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="One page – kampania">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">One page – kampania</h4>
+                <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <!-- RZĄD 2: Components & Microinteractions (też 5 boxów) -->
+        <article class="portfolio-row">
+          <header class="portfolio-row__head">
+            <h3 class="portfolio-row__title">App components & microinteractions</h3>
+
+            <div class="slider-nav" data-slider-nav="ui-micro">
+              <button class="slider-nav__btn slider-nav__btn--prev" type="button" aria-label="Poprzednie projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 4l-8 8 8 8" />
+                </svg>
+              </button>
+              <button class="slider-nav__btn slider-nav__btn--next" type="button" aria-label="Następne projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 4l8 8-8 8" />
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="project-strip" data-slider="ui-micro">
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="Kafelek kursów">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Karta kursu – hover</h4>
+                  <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="Panel filtrów">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Panel filtrów</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="var(--bg-light)" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="Animacja przycisku">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Animacja CTA</h4>
+                  <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="Widok modala">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Modal z potwierdzeniem</h4>
+                   <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/ui.jpg" alt="Lista powiadomień">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Lista powiadomień</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= PROJEKTY CYFROWE ================= -->
+    <section id="section-digital" class="portfolio-section" aria-labelledby="section-digital">
+      <header class="portfolio-section__head">
+        <h2 >Projekty cyfrowe</h2>
+      </header>
+
+      <div class="portfolio-group">
+        <article class="portfolio-row">
+          <header class="portfolio-row__head">
+            <h3 class="portfolio-row__title">Social media & kampanie</h3>
+
+            <div class="slider-nav" data-slider-nav="digital-social">
+              <button class="slider-nav__btn slider-nav__btn--prev" type="button" aria-label="Poprzednie projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 4l-8 8 8 8" />
+                </svg>
+              </button>
+              <button class="slider-nav__btn slider-nav__btn--next" type="button" aria-label="Następne projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 4l8 8-8 8" />
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="project-strip" data-slider="digital-social">
+            <!-- 5 przykładów -->
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Karuzela na Instagram">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Karuzela Instagram</h4>
+                  <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Post kampanijny">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Post kampanijny</h4>
+                 <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Newsletter produktowy">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Newsletter produktowy</h4>
+                  <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Baner display">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Baner display</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Kreacja do kampanii">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Kreacja do kampanii</h4>
+                   <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </article>
+          <article class="portfolio-row">
+          <header class="portfolio-row__head">
+            <h3 class="portfolio-row__title">Interaktywne pliki, newslettery, banery,  e-booki</h3>
+
+            <div class="slider-nav" data-slider-nav="digital-social">
+              <button class="slider-nav__btn slider-nav__btn--prev" type="button" aria-label="Poprzednie projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 4l-8 8 8 8" />
+                </svg>
+              </button>
+              <button class="slider-nav__btn slider-nav__btn--next" type="button" aria-label="Następne projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 4l8 8-8 8" />
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="project-strip" data-slider="digital-social">
+            <!-- 5 przykładów -->
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Karuzela na Instagram">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Karuzela Instagram</h4>
+                  <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Post kampanijny">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Post kampanijny</h4>
+                 <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Newsletter produktowy">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Newsletter produktowy</h4>
+                  <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Baner display">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Baner display</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/digital.jpg" alt="Kreacja do kampanii">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Kreacja do kampanii</h4>
+                   <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= GRAFIKA DRUKOWANA ================= -->
+    <section id="section-print" class="portfolio-section" aria-labelledby="section-print">
+      <header class="portfolio-section__head">
+        <h2 >Druk</h2>
+      </header>
+
+      <div class="portfolio-group">
+        <article class="portfolio-row">
+          <header class="portfolio-row__head">
+            <h3 class="portfolio-row__title">Ulotki</h3>
+
+            <div class="slider-nav" data-slider-nav="print-flyers">
+              <button class="slider-nav__btn slider-nav__btn--prev" type="button" aria-label="Poprzednie projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 4l-8 8 8 8" />
+                </svg>
+              </button>
+              <button class="slider-nav__btn slider-nav__btn--next" type="button" aria-label="Następne projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 4l8 8-8 8" />
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="project-strip" data-slider="print-flyers">
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Seria ulotek uczelni">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Seria ulotek uczelni</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Katalog kierunków studiów">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Katalog kierunków studiów</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Plakat wydarzenia">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Plakat wydarzenia</h4>
+                   <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Roll-up targowy">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Roll-up targowy</h4>
+                  <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Okładka katalogu">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Okładka katalogu</h4>
+                 <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+
+              </div>
+            </article>
+          </div>
+        </article>
+
+
+
+        <article class="portfolio-row">
+          <header class="portfolio-row__head">
+            <h3 class="portfolio-row__title">Plakaty, kalendarze, zaproszenia, katalogi</h3>
+
+            <div class="slider-nav" data-slider-nav="print-flyers">
+              <button class="slider-nav__btn slider-nav__btn--prev" type="button" aria-label="Poprzednie projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 4l-8 8 8 8" />
+                </svg>
+              </button>
+              <button class="slider-nav__btn slider-nav__btn--next" type="button" aria-label="Następne projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 4l8 8-8 8" />
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="project-strip" data-slider="print-flyers">
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Seria ulotek uczelni">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Seria ulotek uczelni</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Katalog kierunków studiów">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Katalog kierunków studiów</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Plakat wydarzenia">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Plakat wydarzenia</h4>
+                   <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Roll-up targowy">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Roll-up targowy</h4>
+                  <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Okładka katalogu">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Okładka katalogu</h4>
+                 <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+
+              </div>
+            </article>
+          </div>
+        </article>
+
+
+        <article class="portfolio-row">
+          <header class="portfolio-row__head">
+            <h3 class="portfolio-row__title">Ulotki i katalogi</h3>
+
+            <div class="slider-nav" data-slider-nav="print-flyers">
+              <button class="slider-nav__btn slider-nav__btn--prev" type="button" aria-label="Poprzednie projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 4l-8 8 8 8" />
+                </svg>
+              </button>
+              <button class="slider-nav__btn slider-nav__btn--next" type="button" aria-label="Następne projekty">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 4l8 8-8 8" />
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="project-strip" data-slider="print-flyers">
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Seria ulotek uczelni">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Seria ulotek uczelni</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Katalog kierunków studiów">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Katalog kierunków studiów</h4>
+                    <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Plakat wydarzenia">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Plakat wydarzenia</h4>
+                   <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Roll-up targowy">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Roll-up targowy</h4>
+                  <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-thumb">
+                <img src="img/portfolio/print.jpg" alt="Okładka katalogu">
+                <div class="thumb-gradient"></div>
+              </div>
+              <div class="project-footer">
+                <h4 class="project-name">Okładka katalogu</h4>
+                 <button class="project-card__cta" aria-label="Zobacz projekt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M6.80281 1.07167L7.59558 0.258301C7.93126 -0.0861003 
+                        8.47405 -0.0861003 8.80616 0.258301L15.7482 7.37715C16.0839 
+                        7.72155 16.0839 8.27845 15.7482 8.61919L8.80616 15.7417C8.47048 
+                        16.0861 7.92769 16.0861 7.59558 15.7417L6.80281 14.9283C6.46356 
+                        14.5803 6.47071 14.0124 6.8171 13.6716L11.1202 9.46554H0.857047C0.3821 
+                        9.46554 0 9.07351 0 8.58622V7.41379C0 6.9265 0.3821 6.53446 
+                        0.857047 6.53446H11.1202L6.8171 2.32837C6.46714 1.98763 6.45999 
+                        1.41974 6.80281 1.07167Z"
+                        fill="currentColor"/>
+                    </svg>
+                </button>
+
+              </div>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+
+  <!-- TEN SAM JS OD MARQUEE CO NA STRONIE GŁÓWNEJ -->
+  <script src="js/toolsMarquee.js"></script>
+  <script src="js/portfolioSlider.js"></script>
+</body>
+</html>
