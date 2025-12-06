@@ -241,15 +241,14 @@
 .project-thumb {
   position: relative;
   width: 100%;
-  height: 196px;          /* dokładnie 196px wysokości */
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 .project-thumb img {
   width: 100%;
   object-fit: cover;       /* zdjęcie wypełnia całą przestrzeń */
   display: block;
+  height: 192px;          /* dokładnie 196px wysokości */
+  border-radius: 10px;
 }
 
 /* gradient od dołu w kolorze boxa – do ok. 1/3 wysokości zdjęcia */
@@ -258,10 +257,10 @@
   left: 0;
   right: 0;
   bottom: -4px;
-  height: 54%;
+  height: 56%;
   background: linear-gradient(
     to top,
-    var(--text) 0%, var(--text) 4%,
+    var(--text) 0%, var(--text) 10%,
     rgba(34,34,38,0.0) 100%
   );
   pointer-events: none;
@@ -271,7 +270,7 @@
 /* ===== DÓŁ KARTY: TYTUŁ + STRZAŁKA OBOK ===== */
 
 .project-footer {
-  margin-top: auto;
+  margin-top: -14px;
   display: flex;
   align-items: end;
   justify-content: space-between;
@@ -366,3 +365,159 @@
 
 
 
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+
+/* ============================================
+   PODSTRONY KATEGORII – "ZOBACZ WIĘCEJ"
+   ============================================ */
+
+.portfolio-more {
+  padding: 96px 0 120px;
+  background: var(--bg-main);        /* jasne tło jak w projekcie */
+}
+
+.portfolio-more__title {
+  margin: 0 0 48px;
+  color: var(--secondary);
+}
+
+
+/* GRID: 3 kolumny na desktopie, 1 kolumna poniżej breakpointu.
+   Nigdy nie będzie układu 2+1. */
+.portfolio-more__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  grid-auto-rows: 360px;   /* stała wysokość kafelków */
+}
+
+@media (max-width: 1024px) {
+  .portfolio-more__grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 360px;
+  }
+}
+
+
+
+/* ================== KAFELKI ================== */
+
+.card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #C5C8D9;
+   box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(191, 162, 247, 0.10);
+  background: #111;
+  height: 100%;          /* wszystkie kafelki równiej wysokości */
+}
+
+/* na wszelki wypadek, gdyby gdzieś indziej zostały wide/tall */
+.card--wide,
+.card--tall {
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+/* tło z inline --bg */
+.card__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.02);
+}
+
+/* gradient */
+.card__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(34, 34, 38, 0.92) 0%,
+    rgba(34, 34, 38, 0.55) 40%,
+    rgba(34, 34, 38, 0.0) 65%
+  );
+}
+
+/* dolna część przyklejona do dołu */
+.card__bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+  color: #fff;
+}
+
+/* typografia */
+.card__title {
+  margin: 0 0 8px;
+  color: var(--secondary);
+}
+
+.card__desc {
+  margin: 0 0 16px;
+  font: 400 12px/1.5 "Poppins", sans-serif;
+  color: #F5F5F5;
+}
+
+/* stopka: ikony + przycisk */
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* lista narzędzi */
+.card__tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card__tools img {
+  height: 20px;
+  width: auto;
+  display: block;
+  /* „rekolorowanie” ikon na jasny fiolet – jeśli SVG są już fioletowe, usuń filter */
+  filter: brightness(0) saturate(100%) invert(84%) sepia(12%)
+          saturate(1160%) hue-rotate(202deg) brightness(100%) contrast(95%);
+}
+
+/* button "ZOBACZ" */
+.btn--see {
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 26px;
+  border-radius: 8px;
+  font: 500 14px "Poppins", sans-serif;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: transform .15s ease, box-shadow .15s ease,
+              background .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.btn--see:hover {
+  background: #fff;
+  color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(125, 95, 199, 0.6);
+}
+
+
+#section-print, #section-digital{
+margin-top: -80px !important;
+}

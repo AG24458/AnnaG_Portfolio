@@ -192,3 +192,95 @@
   }
 }
 
+
+/* ===== MENU PORTFOLIO – dropdown ===== */
+
+.menu__item--has-submenu {
+  position: relative;
+}
+
+/* przycisk wygląda jak zwykły link w menu */
+.menu__toggle {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu__caret {
+  font-size: 0.7em;
+  transform: translateY(1px);
+}
+
+/* lista rozwijana */
+.menu__submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 8px;
+  min-width: 180px;
+  padding: 8px 0;
+  list-style: none;
+
+  background: #111118;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s linear;
+  z-index: 20;
+}
+
+.menu__submenu a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #f5f5ff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menu__submenu a:hover {
+  background: rgba(191,162,247,.2);
+}
+
+/* stan otwarty – nadawany z JS */
+.menu__item--has-submenu.menu__item--open > .menu__submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* MOBILE – jeśli masz menu pionowe, dropdown może po prostu wisieć pod PORTFOLIO */
+@media (max-width: 768px) {
+  .menu__item--has-submenu {
+    width: 100%;
+  }
+  .menu__submenu {
+    position: static;
+    box-shadow: none;
+    margin-top: 4px;
+    background: transparent;
+    padding: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: none;
+  }
+  .menu__item--has-submenu.menu__item--open > .menu__submenu {
+    opacity: 1;
+    max-height: 400px; /* żeby się rozwinęło */
+  }
+  .menu__submenu a {
+    padding-left: 0;
+  }
+}
+

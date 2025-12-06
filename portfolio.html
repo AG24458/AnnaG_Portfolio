@@ -26,13 +26,26 @@
     <div class="container header-top">
       <a class="brand" href="index.html">WESTERN&nbsp;UNION</a>
 
-      <nav class="site-nav" aria-label="Główne menu">
-        <ul class="menu" role="list">
-          <li class="menu__item"><a href="portfolio.html">PORTFOLIO</a></li>
-          <li class="menu__item"><a href="index.html#about">O&nbsp;MNIE</a></li>
-          <li class="menu__item"><a href="index.html#offer">OFERTA</a></li>
-        </ul>
-      </nav>
+     <nav class="site-nav" aria-label="Główne menu">
+  <ul class="menu" role="list">
+
+    <!-- PORTFOLIO z dropdownem -->
+   <li class="menu__item menu__item--has-submenu">
+  <a href="#" class="menu__link menu__parent">PORTFOLIO</a>
+
+  <ul class="menu__submenu" role="menu">
+    <li><a href="portfolio.html">Wszystkie</a></li>
+    <li><a href="portfolio-uiux.html">UX | UI</a></li>
+    <li><a href="portfolio-digital.html">Digital</a></li>
+    <li><a href="portfolio-print.html">Druk</a></li>
+  </ul>
+</li>
+
+    <!-- reszta jak było -->
+    <li class="menu__item"><a class="menu__link" href="index.html#about">O&nbsp;MNIE</a></li>
+    <li class="menu__item"><a class="menu__link" href="index.html#offer">OFERTA</a></li>
+  </ul>
+</nav>
     </div>
 
     <div class="site-actions" aria-label="Akcje">
@@ -397,7 +410,7 @@
     </section>
 
     <!-- ================= PROJEKTY CYFROWE ================= -->
-    <section id="section-digital" class="portfolio-section" aria-labelledby="section-digital">
+    <section  class="portfolio-section" aria-labelledby="section-digital">
       <header class="portfolio-section__head">
         <h2 >Projekty cyfrowe</h2>
       </header>
@@ -689,7 +702,7 @@
     </section>
 
     <!-- ================= GRAFIKA DRUKOWANA ================= -->
-    <section id="section-print" class="portfolio-section" aria-labelledby="section-print">
+    <section class="portfolio-section" aria-labelledby="section-print">
       <header class="portfolio-section__head">
         <h2 >Druk</h2>
       </header>
@@ -1133,5 +1146,6 @@
   <!-- TEN SAM JS OD MARQUEE CO NA STRONIE GŁÓWNEJ -->
   <script src="js/toolsMarquee.js"></script>
   <script src="js/portfolioSlider.js"></script>
+   <script src="js/menuPortfolio.js"></script>
 </body>
 </html>
