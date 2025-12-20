@@ -1,0 +1,275 @@
+/* =========================================
+   PODSTRONA POJEDYNCZEGO PROJEKTU
+   ========================================= */
+
+.page-project {
+  background: var(--bg-main, #EDEDF5);
+  color: var(--bg-dark);
+}
+
+/* =========================================
+   HEADER – FULL WIDTH TŁO (GRADIENT + FOTO)
+   ========================================= */
+
+.header_project {
+  position: relative;
+  width: 100%;
+
+  /* ~500px wysokości, ale reaguje na okno */
+  height: 55vh;
+  min-height: 504px;
+
+  /* TU PODMIENIASZ ZDJĘCIE DLA KAŻDEGO PROJEKTU */
+  background-image:
+ linear-gradient(
+  to bottom,
+  rgba(237, 237, 245, 1) 0%,
+   rgba(237, 237, 245, 0.5) 20%,
+ rgba(30, 30, 30, 0.8) 40%,
+  rgba(30, 30, 30, 1) 80%,
+  rgba(30, 30, 30, 1) 100%
+),
+    url("../img/projects/vizja-ulotki/01.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #fff;
+}
+
+/* upewniamy się, że menu i hero leżą nad tłem */
+.header_project .header-top,
+.header_project .site-actions,
+.header_project .portfolio-hero {
+  z-index: 2;
+}
+
+h1{
+        color: var(--secondary);
+    font-size: 72px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+.accent-text {
+    margin-bottom: 8px;
+}
+
+/* HERO – używamy tych samych ustawień co na innych
+   (padding od góry/dołu jak w portfolio) */
+
+.header_project .portfolio-hero {
+  padding-top: 120px;     /* od menu */
+  padding-bottom: 100px;  /* do sekcji z projektem */
+  background: transparent; /* tło jest na .header_project */
+}
+
+/* NIE zmieniamy fontów h1/akcentu – bierze je z base/portfolio */
+
+
+/* =========================================
+   SEKCJA PROJEKTU (ciemne tło pod kaflami)
+   ========================================= */
+
+.project-gallery {
+  background: var(--bg-dark);           /* ciemne tło jak na layoutach */
+}
+
+/* GRID + BREADCRUMBS W ŚRODKU */
+
+.project-grid {
+  max-width: 1600px;
+  margin: 0 auto;
+    padding-inline: var(--container-pad);  display: grid;
+  
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* breadcrumbs są pierwszym elementem */
+.project-grid > .breadcrumbs {
+  grid-column: 1 / -1;
+  margin: 0 0 8px;
+}
+
+/* breadcrumbs na tej stronie */
+
+.page-project .breadcrumbs {
+  color: #B9BAD4;
+}
+
+.page-project .breadcrumbs a {
+  color: #E0E1F5;
+  text-decoration: none;
+}
+
+.page-project .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   KAFELKI ZDJĘĆ PROJEKTU
+   ========================================= */
+
+.project-grid__item {
+  position: relative;
+  grid-column: span 6;      /* domyślnie pół szerokości */
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.35),
+    0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.project-grid__item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* warianty układu – tylko klasy w HTML zmieniasz */
+
+.project-grid__item--hero {
+  grid-column: 1 / -1;   /* pełna szerokość */
+}
+
+.project-grid__item--wide {
+  grid-column: span 12;  /* też pełna, ale osobny modifier */
+}
+
+.project-grid__item--tall {
+  grid-row: span 2;      /* „wysoki” kafel */
+}
+
+.project-grid__item--third {
+  grid-column: span 4;   /* trzy w rzędzie */
+}
+
+.project-grid__item--full-bleed {
+  grid-column: 1 / -1;
+  border-radius: 0;
+}
+
+
+/* =========================================
+   NAWIGACJA: POPRZEDNI / NASTĘPNY PROJEKT
+   ========================================= */
+
+.project-nav {
+  padding: 0 0 80px;
+  background: #111;
+}
+
+.project-nav__inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 20px;
+    padding-inline: var(--container-pad);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.project-nav__link {
+  flex: 1 1 0;
+  padding-top: 8px;
+  font: 500 14px/1.4 "Poppins", sans-serif;
+  text-decoration: none;
+  color: #C5C6E5;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.project-nav__link span {
+  font-weight: 400;
+  color: #8F90B0;
+}
+
+.project-nav__link--prev {
+  text-align: left;
+}
+
+.project-nav__link--next {
+  text-align: right;
+}
+
+.project-nav__link:hover {
+  color: var(--primary, #BFA2F7);
+}
+
+.project-nav__link:hover span {
+  color: var(--primary, #BFA2F7);
+}
+
+
+/* =========================================
+   RWD
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+  .project-gallery {
+    padding: 40px 0 56px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .project-grid__item,
+  .project-grid__item--hero,
+  .project-grid__item--wide {
+    grid-column: 1 / -1;
+  }
+
+  .project-grid__item--third {
+    grid-column: span 4;
+  }
+
+  .project-nav__inner {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+
+  .header_project {
+    min-height: 60vh;
+  }
+
+  .header_project .portfolio-hero {
+    padding-top: 104px;
+    padding-bottom: 96px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-grid__item,
+  .project-grid__item--hero,
+  .project-grid__item--wide,
+  .project-grid__item--third {
+    grid-column: 1 / -1;
+  }
+
+  .project-grid__item--tall {
+    grid-row: auto;
+  }
+
+  .project-nav__inner {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .project-nav__link--next {
+    text-align: left;
+  }
+}
+
+
