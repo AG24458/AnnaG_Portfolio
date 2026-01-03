@@ -14,28 +14,25 @@
 .header_project {
   position: relative;
   width: 100%;
-
-  /* ~500px wysokości, ale reaguje na okno */
   height: 55vh;
   min-height: 504px;
 
-  /* TU PODMIENIASZ ZDJĘCIE DLA KAŻDEGO PROJEKTU */
   background-image:
- linear-gradient(
-  to bottom,
-  rgba(237, 237, 245, 1) 0%,
-   rgba(237, 237, 245, 0.5) 20%,
- rgba(30, 30, 30, 0.8) 40%,
-  rgba(30, 30, 30, 1) 80%,
-  rgba(30, 30, 30, 1) 100%
-),
-    url("../img/projects/vizja-ulotki/01.png");
+    linear-gradient(
+      to bottom,
+      rgba(237, 237, 245, 1) 0%,
+      rgba(237, 237, 245, 0.5) 20%,
+      rgba(17, 17, 17, 0.8) 40%,
+      rgba(17, 17, 17, 1) 80%,
+      rgba(17, 17, 17, 1) 100%
+    ),
+    var(--project-hero-img);
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  color: #fff;
 }
+
 
 /* upewniamy się, że menu i hero leżą nad tłem */
 .header_project .header-top,
@@ -80,42 +77,54 @@ h1{
 .project-grid {
   max-width: 1600px;
   margin: 0 auto;
-    padding-inline: var(--container-pad);  display: grid;
-  
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 24px;
+ display: grid;
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+  gap: 12px;
 }
 
 /* breadcrumbs są pierwszym elementem */
 .project-grid > .breadcrumbs {
   grid-column: 1 / -1;
-  margin: 0 0 8px;
+  margin: 0 0;
 }
 
 /* breadcrumbs na tej stronie */
 
-.page-project .breadcrumbs {
-  color: #B9BAD4;
+.breadcrumbs {
+  padding-bottom: 22px;
+  font-size: 14px;
+  color: var(--grey);
 }
 
-.page-project .breadcrumbs a {
-  color: #E0E1F5;
+.breadcrumbs a {
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
   text-decoration: none;
 }
 
-.page-project .breadcrumbs a:hover {
+.breadcrumbs a:hover {
+  color: var(--primary);
   text-decoration: underline;
 }
-
+.breadcrumbs span {
+  color: var(--primary);
+}
 
 /* =========================================
    KAFELKI ZDJĘĆ PROJEKTU
    ========================================= */
 
+  .project-grid {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
 .project-grid__item {
   position: relative;
-  grid-column: span 6;      /* domyślnie pół szerokości */
-  border-radius: 16px;
+  grid-column: span 5;      /* domyślnie pół szerokości */
+  border-radius: 12px;
   overflow: hidden;
   background: #000;
   box-shadow:
@@ -132,27 +141,38 @@ h1{
 
 /* warianty układu – tylko klasy w HTML zmieniasz */
 
-.project-grid__item--hero {
-  grid-column: 1 / -1;   /* pełna szerokość */
+/* --- SPANY POD 10 KOLUMN --- */
+/* spany */
+
+.project-grid__item--span-2{ grid-column: span 2; }
+.project-grid__item--span-3{ grid-column: span 3; }
+.project-grid__item--span-4{ grid-column: span 4; }
+.project-grid__item--span-5{ grid-column: span 5; }
+.project-grid__item--span-6{ grid-column: span 6; }
+.project-grid__item--span-7{ grid-column: span 7; }
+.project-grid__item--span-8{ grid-column: span 8; }
+.project-grid__item--span-9{ grid-column: span 9; }
+.project-grid__item--span-10{ grid-column: span 10; }
+.project-grid__item--span-12{ grid-column: span 12; }
+.project-grid__item--span-14{ grid-column: span 14; }
+.project-grid__item--span-16{ grid-column: span 16; }
+.project-grid__item--span-18{ grid-column: span 18; }
+.project-grid__item--span-20{ grid-column: span 20; }
+.project-grid__item--span-24{ grid-column: span 24; }
+
+
+.project-grid__item--row-2{ grid-row: span 2; }
+.project-grid__item--row-3{ grid-row: span 3; }
+
+/* KLUCZ: 06 ma narzucić wysokość dwóch rzędów */
+.project-grid__item--tall-master{
+  aspect-ratio: 3 / 7; /* <-- do strojenia */
 }
 
-.project-grid__item--wide {
-  grid-column: span 12;  /* też pełna, ale osobny modifier */
-}
 
-.project-grid__item--tall {
-  grid-row: span 2;      /* „wysoki” kafel */
+figure {
+  margin: 0px;
 }
-
-.project-grid__item--third {
-  grid-column: span 4;   /* trzy w rzędzie */
-}
-
-.project-grid__item--full-bleed {
-  grid-column: 1 / -1;
-  border-radius: 0;
-}
-
 
 /* =========================================
    NAWIGACJA: POPRZEDNI / NASTĘPNY PROJEKT
@@ -167,11 +187,24 @@ h1{
   max-width: 1600px;
   margin: 0 auto;
   padding-top: 20px;
-    padding-inline: var(--container-pad);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-inline: var(--container-pad);
+
   display: flex;
   justify-content: space-between;
   gap: 24px;
+
+  position: relative;
+  border-top: none; /* <- ważne */
+}
+
+.project-nav__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--container-pad);
+  right: var(--container-pad);
+  height: 1px;
+  background: var(--grey);
 }
 
 .project-nav__link {
@@ -185,8 +218,9 @@ h1{
 }
 
 .project-nav__link span {
+  text-transform: lowercase;
   font-weight: 400;
-  color: #8F90B0;
+  color: var(--grey);
 }
 
 .project-nav__link--prev {
@@ -272,4 +306,34 @@ h1{
   }
 }
 
+
+.project-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+/* 01 */
+.project-grid__item--kalendarz-lock1 {
+  aspect-ratio: 13 / 7;
+}
+
+/* 02 */
+.project-grid__item--kalendarz-lock3 {
+  aspect-ratio: 13 / 7;
+}
+
+/* 03 – pasek */
+.project-grid__item--kalendarz-lock2 {
+  aspect-ratio: 10 / 47;
+}
+
+/* 04 – master */
+.project-grid__item--kalendarz-lock4 {
+  aspect-ratio: 15 / 22;
+}
 

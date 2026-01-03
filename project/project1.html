@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seria ulotek VIZJA Akademii – Projekt</title>
+  <title>Seria ulotek VIZJA Akademiis</title>
 
   <!-- STYLE GLOBALNE -->
   <link rel="stylesheet" href="../css/base.css">
@@ -19,11 +19,13 @@
 <body class="page-project">
 
   <!-- ========== HEADER PROJEKTU ========== -->
-    <section class="header_project">
+   <section
+    class="header_project"
+    style="--project-hero-img: url('../img/projects/druk/vizja-ulotki/01.png');">
 
 
     <div class="container header-top">
-      <a class="brand" href="index.html">WESTERN&nbsp;UNION</a>
+      <a class="brand" href="../index.html">WESTERN&nbsp;UNION</a>
 
    <nav class="site-nav" aria-label="Główne menu">
   <ul class="menu" role="list">
@@ -33,10 +35,10 @@
   <a href="#" class="menu__link menu__parent">PORTFOLIO</a>
 
   <ul class="menu__submenu" role="menu">
-    <li><a href="portfolio.html">Wszystkie</a></li>
-    <li><a href="portfolio-uiux.html">UX | UI</a></li>
-    <li><a href="portfolio-digital.html">Digital</a></li>
-    <li><a href="portfolio-print.html">Druk</a></li>
+    <li><a href="../portfolio.html">Wszystkie</a></li>
+    <li><a href="../portfolio-uxui.html">UX | UI</a></li>
+    <li><a href="../portfolio-digital.html">Digital</a></li>
+    <li><a href="../portfolio-print.html">Druk</a></li>
   </ul>
 </li>
 
@@ -62,9 +64,9 @@
     <section class="portfolio-hero">
       <div class="container">
         <p class="accent-text">
-         | Social media design, reklamy, interaktywne pliki, newslettery, e-booki
+         | Seria ulotek VIZJA Akademii
         </p>
-        <h1>PROJEKTY<br>CYFROWE</h1>
+        <h1>PROJEKT</h1>
       </div>
     </section>
 
@@ -80,57 +82,75 @@
 
       <div class="container project-grid">
 
-         <nav class="breadcrumbs" aria-label="Ścieżka nawigacji">
-      <a href="../index.html">Główna</a> →
-      <a href="../portfolio.html">Portfolio</a> →
-      <a href="../portfolio-print.html">Druk</a> →
-      <span>Seria ulotek VIZJA Akademii</span>
-    </nav>
-        <!-- przykład: jeden duży hero na górze -->
-        <figure class="project-grid__item project-grid__item--hero">
-          <img src="../img/projects/vizja-ulotki/01.jpg"
-               alt="Kompozycja wszystkich materiałów z serii ulotek VIZJA Akademii">
-        </figure>
+        <nav class="breadcrumbs" aria-label="Ścieżka nawigacji">
+        <a href="../index.html">Główna</a> →
+        <a href="../portfolio.html">Portfolio</a> →
+        <a href="../portfolio-print.html">Druk</a> →
+        <span>Seria ulotek VIZJA Akademii</span>
+        </nav>
+              <!-- rząd 1 lewy: 02 i 03 -->
+            <figure class="project-grid__item project-grid__item--span-9">
+            <img src="../img/projects/druk/vizja-ulotki/02.png" alt="02">
+            </figure>
 
-        <!-- dalej układ zdjęć – zmieniasz TYLKO HTML -->
-        <figure class="project-grid__item project-grid__item--wide">
-          <img src="../img/projects/vizja-ulotki/02.jpg"
-               alt="Zbliżenie na projekty ulotek">
-        </figure>
+            <figure class="project-grid__item project-grid__item--span-9">
+            <img src="../img/projects/druk/vizja-ulotki/03.png" alt="03">
+            </figure>
 
-        <figure class="project-grid__item">
-          <img src="../img/projects/vizja-ulotki/03.jpg"
-               alt="Ulotka front">
-        </figure>
+            <!-- prawa kolumna: 06 (master wysokości) -->
+            <figure class="project-grid__item project-grid__item--span-6 project-grid__item--row-2 project-grid__item--tall-master">
+            <img src="../img/projects/druk/vizja-ulotki/06.png" alt="06">
+            </figure>
 
-        <figure class="project-grid__item">
-          <img src="../img/projects/vizja-ulotki/04.jpg"
-               alt="Ulotka tył">
-        </figure>
+            <!-- rząd 2 lewy: 01 na szerokość 02+03 -->
+            <figure class="project-grid__item project-grid__item--span-18">
+            <img src="../img/projects/druk/vizja-ulotki/01.png" alt="01">
+            </figure>
 
-        <figure class="project-grid__item project-grid__item--tall">
-          <img src="../img/projects/vizja-ulotki/05.jpg"
-               alt="Roll-up targowy">
-        </figure>
+
+            <figure class="project-grid__item project-grid__item--span-12">
+            <img src="../img/projects/druk/vizja-ulotki/04.png" alt="">
+            </figure>
+
+            <figure class="project-grid__item project-grid__item--span-12">
+            <img src="../img/projects/druk/vizja-ulotki/05.png" alt="">
+            </figure>
+
+            <figure class="project-grid__item project-grid__item--span-6 project-grid__item--row-2 project-grid__item--tall-master">
+            <img src="../img/projects/druk/ulotki_kosmetologia_Farmacja/04.jpg" alt="06">
+            </figure>
+            
+            <figure class="project-grid__item project-grid__item--span-18">
+            <img src="../img/projects/druk/ulotki_kosmetologia_Farmacja/02.jpg" alt="">
+            </figure>
+
+            <figure class="project-grid__item project-grid__item--span-18">
+            <img src="../img/projects/druk/ulotki_kosmetologia_Farmacja/03.jpg" alt="">
+            </figure>
+
+
 
         <!-- itd., dodajesz/odejmujesz <figure> według potrzeb -->
       </div>
     </section>
+    
 
     <!-- ========== NAWIGACJA MIĘDZY PROJEKTAMI ========== -->
-    <section class="project-nav">
+       <section class="project-nav">
       <div class="container project-nav__inner">
-        <a class="project-nav__link project-nav__link--prev" href="projekt-00.html">
-          Zobacz więcej<br><span>Poprzedni projekt w tej kategorii</span>
+        <a class="project-nav__link project-nav__link--prev" href="project_katalog_aeh.html">
+          Zobacz więcej<br><span>Katalog Kierunków Vizja AEH</span>
         </a>
-        <a class="project-nav__link project-nav__link--next" href="projekt-02.html">
-          Zobacz więcej<br><span>Następny projekt w tej kategorii</span>
+        <a class="project-nav__link project-nav__link--next" href="project_poradnia.html">
+          Zobacz więcej<br><span>Ulotka Poradnia Vizja</span>
         </a>
       </div>
     </section>
 
   </main>
   </section>
+
+    <script src="../js/menuPortfolio.js"></script>
 
 </body>
 </html>

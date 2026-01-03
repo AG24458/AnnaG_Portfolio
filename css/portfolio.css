@@ -32,7 +32,7 @@
 .breadcrumbs {
   margin-top: 16px;
   font-size: 14px;
-  color: var(--primary);
+  color: var(--grey);
 }
 
 .breadcrumbs a {
@@ -46,6 +46,9 @@
 .breadcrumbs a:hover {
   color: var(--primary);
   text-decoration: underline;
+}
+.breadcrumbs span {
+  color: var(--primary);
 }
 
 /* ===== FIX: Prawy panel w podstronie portfolio ===== */
