@@ -1,436 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Anna</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Fonty Google: Syne, Poppins, Bebas Neue -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
-  
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-    (function(){
-    emailjs.init("rymyCY12LqUD6Q2L_"); // <-- Twój USER ID
-    })();
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Anna Górska</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- STYLE GLOBALNE -->
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- STYLE TYLKO DLA STRONY STARTOWEJ -->
+  <link rel="stylesheet" href="css/home-start.css">
 </head>
-<body>
-<header id="header" class="site-header" role="banner" aria-label="Górny pasek">
-  <!-- tło prawego panelu -->
-  <div class="site-header__side" aria-hidden="true"></div>
 
-  <!-- pasek z logo i menu -->
-  <div class="container header-top">
-    <!-- logo placeholder -->
-    <a class="brand" href="/" aria-label="Logo (placeholder)">WESTERN&nbsp;UNION</a>
+<body class="page-home-start">
 
-    <!-- menu -->
-   <nav class="site-nav" aria-label="Główne menu">
-  <ul class="menu" role="list">
+  <!-- ================= HEADER / MENU ================= -->
+  <header class="start-header">
+    <div class="start-header__inner">
 
-    <!-- PORTFOLIO z dropdownem -->
-   <li class="menu__item menu__item--has-submenu">
-  <a href="#" class="menu__link menu__parent">PORTFOLIO</a>
+      <!-- LOGO -->
+      <a href="/" class="start-brand">WESTERN&nbsp;UNION</a>
 
-  <ul class="menu__submenu" role="menu">
-    <li><a href="portfolio.html">Wszystkie</a></li>
-    <li><a href="portfolio-uxui.html">UX | UI</a></li>
-    <li><a href="portfolio-digital.html">Digital</a></li>
-    <li><a href="portfolio-print.html">Druk</a></li>
-  </ul>
-</li>
-
-    <!-- reszta jak było -->
-    <li class="menu__item"><a class="menu__link" href="index.html#about">O&nbsp;MNIE</a></li>
-    <li class="menu__item"><a class="menu__link" href="index.html#offer">OFERTA</a></li>
-  </ul>
-</nav>
-  </div>
-
- <!-- decoration_text -->
-  <div class="hero-bg-words" aria-hidden="true">
-  <img src="img/decoration_text.svg" alt="">
-</div>
-
-
-  <!-- akcje w prawym panelu: KONTAKT + język -->
-  <div class="site-actions" aria-label="Akcje">
-  <a class="btn btn--contact button-text" href="#contact">KONTAKT</a>
-
-  <button class="lang-switch" type="button" aria-label="Zmień język">
-    <span class="lang-label">POLSKI</span>
-    <span class="lang-icon" aria-hidden="true">⟷</span>
-  </button>
-</div>
-
-  <!-- ikony na dole prawego panelu (placeholdery) -->
-  <div class="header-socials" aria-label="Linki społecznościowe">
-    <a href="#" aria-label="GitHub"><img src="img/github.svg" alt="github_logo_link"></a>
-    <a href="#" aria-label="LinkedIn"><img src="img/linkedin.svg" alt="linkedin_logo_link"></a>
-  </div>
-  </div>
-
-  <!-- HERO -->
-<section class="hero" id="hero">
-  <div class="container hero__inner">
-    <div class="hero__copy">
-      <p class="accent-text" style="color:var(--accent-light)">| GRAFIK I PROGRAMISTA</p>
-      <h1 style="color:var(--secondary)">ANNA<br>GÓRSKA</h1>
-      <p class="main-text hero__lead">
-        Polska projektantka graficzna oraz inżynier IT. Specjalizuję się w tworzeniu
-        nowoczesnych stron internetowych, identyfikacji wizualnej i interfejsach UI/UX.
-        Łączę techniczne umiejętności z kreatywnym podejściem do designu.
-      </p>
-    </div>
-
-    <!-- zdjęcie (placeholder – podmień src) -->
-    <figure class="hero__media">
-      <img src="img/hero-placeholder.png" alt="Anna Górska" class="hero__photo">
-    </figure>
-  </div>
-
-  <!-- strzałka w dół (placeholder) -->
-    <a href="#next" class="hero__scroll" aria-label="Przewiń w dół">
-        <img src="img/arrow_down.svg" alt="" class="hero__icon" />
-    </a>
-</section>
-</header>
-
-
-<!-- TOOLS STRIP (marquee) -->
-<!-- TOOLS STRIP (marquee) -->
-<section class="tools-strip" aria-label="Technologie i narzędzia">
-  <div class="tools-strip__viewport">
-    <ul class="tools-strip__track">
-      <li><img class="tool-ic" src="img/tools/adobe-pdf.svg" alt="Adobe Acrobat PDF logo"></li>
-      <li><img class="tool-ic" src="img/tools/chatgpt.svg" alt="ChatGPT logo"></li>
-      <li><img class="tool-ic" src="img/tools/css.svg" alt="CSS3 icon"></li>
-      <li><img class="tool-ic" src="img/tools/elementor.svg" alt="Elementor logo"></li>
-      <li><img class="tool-ic" src="img/tools/figma.svg" alt="Figma logo"></li>
-      <li><img class="tool-ic" src="img/tools/git.svg" alt="Git logo"></li>
-      <li><img class="tool-ic" src="img/tools/github.svg" alt="GitHub logo"></li>
-      <li><img class="tool-ic" src="img/tools/html.svg" alt="HTML5 logo"></li>
-      <li><img class="tool-ic" src="img/tools/illustrator.svg" alt="Adobe Illustrator logo"></li>
-      <li><img class="tool-ic" src="img/tools/indesign.svg" alt="Adobe InDesign logo"></li>
-      <li><img class="tool-ic" src="img/tools/javascript.svg" alt="JavaScript logo"></li>
-      <li><img class="tool-ic" src="img/tools/lightroom.svg" alt="Adobe Lightroom logo"></li>
-      <li><img class="tool-ic" src="img/tools/miro.svg" alt="Miro logo"></li>
-      <li><img class="tool-ic" src="img/tools/photoshop.svg" alt="Adobe Photoshop logo"></li>
-      <li><img class="tool-ic" src="img/tools/premiere.svg" alt="Adobe Premiere Pro logo"></li>
-      <li><img class="tool-ic" src="img/tools/react.svg" alt="React.js logo"></li>
-      <li><img class="tool-ic" src="img/tools/slack.svg" alt="Slack logo"></li>
-      <li><img class="tool-ic" src="img/tools/trello.svg" alt="Trello logo"></li>
-      <li><img class="tool-ic" src="img/tools/vscode.svg" alt="Visual Studio Code logo"></li>
-      <li><img class="tool-ic" src="img/tools/wordpress.svg" alt="WordPress logo"></li>
-      <li><img class="tool-ic" src="img/tools/xd.svg" alt="Adobe XD logo"></li>
-      <li><img class="tool-ic" src="img/tools/webflow.svg" alt="Webflow logo"></li>
-      <li><img class="tool-ic" src="img/tools/envato.svg" alt="Envato Elements logo"></li>
-    </ul>
-  </div>
-</section>
-
-<!-- podpięcie JS -->
-<script src="js/toolsMarquee.js"></script>
-
-
-
-<!-- PORTFOLIO PROJEKTOWE -->
-<section class="portfolio" id="portfolio">
-  <div class="container">
-    <header class="portfolio__head">
-      <h2 class="portfolio__title">Portfolio<br>projektowe</h2>
-      <p class="portfolio__intro">
-        Zapoznaj się z moimi projektami – od klasycznych materiałów drukowanych, przez
-        nowoczesne realizacje cyfrowe, aż po interfejsy użytkownika i rozwiązania developerskie.
-        Znajdziesz tu ulotki, plakaty, grafiki, strony www, makiety UX/UI oraz aplikacje.
-      </p>
-    </header>
-
-    <ul class="portfolio__grid">
-      <!-- 1: DRUK (normal) -->
-      <li class="card">
-        <div class="card__bg" style="--bg:url('img/portfolio/druk.jpg')"></div>
-        <div class="card__scrim"></div>
-        <div class="card__bottom">
-          <h4 class="card__title">Projekty do druku</h4>
-          <p class="card__desc">Ulotki, plakaty, rollupy, okleiny, banery, kalendarze, katalogi, materiały POS</p>
-          <div class="card__footer">
-            <ul class="card__tools">
-              <li><img src="img/tools/indesign.svg" alt="InDesign"></li>
-              <li><img src="img/tools/photoshop.svg" alt="Photoshop"></li>
-              <li><img src="img/tools/illustrator.svg" alt="Illustrator"></li>
-              <li><img src="img/tools/lightroom.svg" alt="Lightroom"></li>
-            </ul>
-            <a class="btn btn--see" href="#">ZOBACZ</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- 2: CYFROWE (normal) -->
-      <li class="card">
-        <div class="card__bg" style="--bg:url('img/portfolio/cyfrowe.jpg')"></div>
-        <div class="card__scrim"></div>
-        <div class="card__bottom">
-          <h4 class="card__title">Projekty cyfrowe</h4>
-          <p class="card__desc">Social media design, reklamy, interaktywne pliki, newslettery, e-booki</p>
-          <div class="card__footer">
-            <ul class="card__tools">
-              <li><img src="img/tools/photoshop.svg"  alt="Photoshop"></li>
-              <li><img src="img/tools/illustrator.svg"alt="Illustrator"></li>
-              <li><img src="img/tools/xd.svg"         alt="Adobe XD"></li>
-              <li><img src="img/tools/figma.svg"      alt="Figma"></li>
-              <li><img src="img/tools/lightroom.svg"  alt="Lightroom"></li>
-            </ul>
-            <a class="btn btn--see" href="#">ZOBACZ</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- 3: DEVELOPERSKIE (wysoki na 2 rzędy) -->
-      <li class="card card--tall">
-        <div class="card__bg" style="--bg:url('img/portfolio/dev.jpg')"></div>
-        <div class="card__scrim"></div>
-        <div class="card__bottom">
-          <h4 class="card__title">Projekty Developerskie</h4>
-          <p class="card__desc">Strony internetowe (HTML, CSS, JS), WordPress, integracje, komponenty</p>
-          <div class="card__footer">
-            <ul class="card__tools">
-              <li><img src="img/tools/xd.svg"       alt="XD"></li>
-              <li><img src="img/tools/figma.svg"    alt="Figma"></li>
-              <li><img src="img/tools/wordpress.svg"alt="WordPress"></li>
-              <li><img src="img/tools/git.svg"      alt="Git"></li>
-              <li><img src="img/tools/github.svg"   alt="GitHub"></li>
-              <li><img src="img/tools/git.svg"      alt="Git"></li>
-
-            </ul>
-            <a class="btn btn--see" href="#">ZOBACZ</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- 4: UI/UX (szeroki na 2 kolumny, na dole) -->
-      <li class="card card--wide">
-        <div class="card__bg" style="--bg:url('img/portfolio/uiux.jpg')"></div>
-        <div class="card__scrim"></div>
-        <div class="card__bottom">
-          <h4 class="card__title">Projekty UI/UX</h4>
-          <p class="card__desc">Aplikacje, strony www, makiety, prototypy, testy użyteczności, styleguide</p>
-          <div class="card__footer">
-            <ul class="card__tools">
-              <li><img src="img/tools/photoshop.svg"  alt="Photoshop"></li>
-              <li><img src="img/tools/illustrator.svg"alt="Illustrator"></li>
-              <li><img src="img/tools/xd.svg"         alt="Adobe XD"></li>
-              <li><img src="img/tools/figma.svg"      alt="Figma"></li>
-            </ul>
-            <a class="btn btn--see" href="#">ZOBACZ</a>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-
-<!-- POZNAJ MNIE -->
-<section class="about" id="about">
-   <div class="container"> 
-  <div class="about__grid">
-    <figure class="about__photo">
-      <img src="img/anna-about.png" alt="Anna przy komputerze">
-      <span class="about__photo-scrim" aria-hidden="true"></span>
-    </figure>
-
- <!-- decoration_text -->
-  <div class="bg-words" aria-hidden="true">
-  <img src="img/text.svg" alt="">
-</div>
-
-    <div class="about__content">
-      <h2 class="about__title">Poznaj mnie</h2>
-      <p class="about__lead">
-      Posiadam ponad 4 lata komercyjnego doświadczenia w projektowaniu graficznym, tworzeniu stron internetowych oraz materiałów cyfrowych i drukowanych. Realizowałam projekty dla takich firm jak BaseOn, Vizja, Edun Korepetycje, Pricing Academy, Autohero czy McHayes. Równolegle zdobyłam ponad roczne doświadczenie w komercyjnym wdrażaniu stron internetowych, obejmujące prace techniczne, optymalizacyjne oraz integracje z narzędziami marketingowymi i analitycznymi.
-      </p>
-      <p class="about__text">
-       Na podstronie  <a href="#o-mnie">o mnie</a> znajdziesz szczegółowe informacje dotyczące moich dotychczasowych współprac, zakresu realizowanych działań, a także wykształcenia i ukończonych kursów.
-      </p>
-    </div>
-    </div>
-  
-
-
-    <div class="about__skills">
-    <div class="skills__col">
-        <h4 class="skills__title">Programy graficzne</h4>
-        <ul class="skills__list">
-        <li><img class="tool-ic" src="img/tools/photoshop.svg" alt="Adobe Photoshop logo"> <p>Photoshop</p></li>
-        <li><img class="tool-ic" src="img/tools/illustrator.svg" alt="Adobe Illustrator logo"> <p>Illustrator</p></li>
-        <li><img class="tool-ic" src="img/tools/indesign.svg" alt="Adobe InDesign logo"> <p>InDesign</p></li>
-        <li><img class="tool-ic" src="img/tools/lightroom.svg" alt="Adobe Lightroom logo"> <p>Lightroom</p></li>
-        <li><img class="tool-ic" src="img/tools/xd.svg" alt="Adobe XD logo"> <p>Adobe XD</p></li>
-        <li><img class="tool-ic" src="img/tools/premiere.svg" alt="Adobe Premiere Pro logo"> <p>Premiere Pro</p></li>
-        <li><img class="tool-ic" src="img/tools/figma.svg" alt="Figma logo"> <p>Figma</p></li>
-        <li><img class="tool-ic" src="img/tools/adobe-pdf.svg" alt="Adobe PDF logo"> <p>Adobe PDF</p></li>
-
+      <!-- MENU -->
+      <nav class="start-nav" aria-label="Główne menu">
+        <ul class="start-menu">
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li><a href="kontakt.html#about">O MNIE</a></li>
+          <li><a href="kontakt.html#offer">OFERTA</a></li>
         </ul>
+      </nav>
+
+      <!-- ACTIONS -->
+      <div class="start-actions">
+        <a href="kontakt.html#contact" class="btn btn--contact">KONTAKT</a>
+
+        <button class="lang-switch" type="button" aria-label="Zmień język">
+          <span class="lang-label">POLSKI</span>
+          <span class="lang-icon">⟷</span>
+        </button>
+      </div>
+
     </div>
+  </header>
 
-    <div class="skills__col">
-        <h4 class="skills__title">Programy developerskie</h4>
-        <ul class="skills__list">
-        <li><img class="tool-ic" src="img/tools/html.svg" alt="HTML5 logo"> <p>HTML</p></li>
-        <li><img class="tool-ic" src="img/tools/css.svg" alt="CSS3 logo"> <p>CSS</p></li>
-        <li><img class="tool-ic" src="img/tools/javascript.svg" alt="JavaScript logo"> <p>JavaScript</p></li>
-        <li><img class="tool-ic" src="img/tools/react.svg" alt="React.js logo"> <p>React</p></li>
-        <li><img class="tool-ic" src="img/tools/wordpress.svg" alt="WordPress logo"> <p>WordPress</p></li>
-        <li><img class="tool-ic" src="img/tools/github.svg" alt="GitHub logo"> <p>GitHub</p></li>
-        <li><img class="tool-ic" src="img/tools/vscode.svg" alt="VS Code logo"> <p>VS Code</p></li>
-
-        </ul>
-    </div>
-
-    <div class="skills__col">
-        <h4 class="skills__title">Pozostałe</h4>
-        <ul class="skills__list">
-        <li><img class="tool-ic" src="img/tools/miro.svg" alt="Miro logo"> <p>Miro</p></li>
-        <li><img class="tool-ic" src="img/tools/slack.svg" alt="Slack logo"> <p>Slack</p></li>
-        <li><img class="tool-ic" src="img/tools/trello.svg" alt="Trello logo"> <p>Trello</p></li>
-        <li><img class="tool-ic" src="img/tools/envato.svg" alt="Envato logo"> <p>Envato</p></li>
-        <li><img class="tool-ic" src="img/tools/chatgpt.svg" alt="ChatGPT logo"> <p>ChatGPT</p></li>
-        <li><img class="tool-ic" src="img/tools/elementor.svg" alt="Elementor logo"> <p>Elementor</p></li>
-        </ul>
-  </div>
-    </div>
+  <!-- ================= KAFELKI ================= -->
+  <main class="start-tiles">
+    <div class="start-title" aria-hidden="true">PORTFOLIO</div>
 
 
-</div>
+      <a href="portfolio-digital.html" class="start-tile tile--digital">
+          <span class="tile-gradient"></span>
+        <span class="start-tile__label">PROJEKTY CYFROWE</span>
+      </a>
 
-<div class="about__more">
-  <a href="#o-mnie" class="btn btn--primary about__more-btn">ZOBACZ WIĘCEJ</a>
-</div>
+      <a href="portfolio-uxui.html" class="start-tile tile--ux">
+          <span class="tile-gradient"></span>
+        <span class="start-tile__label">PROJEKTY UI / UX</span>
+      </a>
 
-</section>
+      <a href="portfolio-print.html" class="start-tile tile--print">
+          <span class="tile-gradient"></span>
+        <span class="start-tile__label">PROJEKTY DO DRUKU</span>
+      </a>
 
-<!-- KONTAKT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact__card">
-     <!-- LEWA STRONA – FORMULARZ -->
-<div class="contact__left">
-  <h2 class="contact__title">Skontaktuj się</h2>
-  <p class="contact__lead">
-    Jeżeli masz dodatkowe pytania lub chciałabyś/chciałbyś porozmawiać o&nbsp;współpracy,
-    zapraszam do kontaktu.
-  </p>
+      <a href="portfolio-dev.html" class="start-tile tile--dev">
+          <span class="tile-gradient"></span>
+        <span class="start-tile__label">PROJEKTY DEVELOPERSKIE</span>
+      </a>
 
-  <form id="contactForm" class="contact__form">
-
-    <label class="contact__field">
-      <input type="text" name="name" placeholder=" " required>
-      <span class="contact__label">Imię</span>
-    </label>
-
-    <label class="contact__field">
-      <input type="email" name="email" placeholder=" " required>
-      <span class="contact__label">Adres e-mail</span>
-    </label>
-
-    <label class="contact__field">
-      <input type="tel" name="phone" placeholder=" " inputmode="tel">
-      <span class="contact__label">Nr telefonu</span>
-    </label>
-
-    <label class="contact__field contact__field--textarea">
-      <textarea name="message" rows="3" placeholder=" " required></textarea>
-      <span class="contact__label">Wiadomość</span>
-    </label>
-
-    <label class="contact__consent">
-      <input type="checkbox" name="consent" required>
-      <span>Wyrażam zgodę na kontakt drogą elektroniczną lub telefoniczną w&nbsp;celu
-        udzielenia odpowiedzi na&nbsp;przesłaną wiadomość.</span>
-    </label>
-
-    <div class="contact__actions">
-      <button type="submit" class="btn btn--primary contact__btn">
-        Wyślij
-      </button>
-      <p id="formMsg" class="form-msg" aria-live="polite"></p>
-    </div>
-
-  </form>
-</div>
-
-      <!-- PRAWA STRONA – PANEL INFO -->
-      <aside class="contact__right">
-        <div class="contact__info">
-          <h3 class="contact__info-title">Info</h3>
-
-          <ul class="contact__info-list">
-            <li>
-             <span class="contact__info-icon"><img src="img/icons/phone.svg" alt=""></span>
-              <p class="contact__info-text">535 635 190</p>
-            </li>
-            <li>
-              <span class="contact__info-icon"><img src="img/icons/email.svg" alt=""></span>
-              <p class="contact__info-text">annag.creative.dev@gmail.com</p>
-            </li>
-            <li>
-              <span class="contact__info-icon"><img src="img/icons/time.svg" alt=""></span>
-              <p class="contact__info-text">10:00 – 21:00</p>
-            </li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init("jvHLvKdzLZ58dfz3p"); /* Mój PUBLIC KEY */
-</script>
-
-<script src="js/contact.js"></script>
-
-
-
-<section class="thumb-loops">
-
-  <!-- RZĄD 1 -->
-  <div class="thumb-loop">
-    <ul class="thumb-loop__track track-1">
-      <li><img src="img/p1.jpg"></li>
-      <li><img src="img/p2.jpg"></li>
-      <li><img src="img/p3.jpg"></li>
-      <li><img src="img/p3.jpg"></li>
-      <li><img src="img/p3.jpg"></li>      
-    </ul>
-  </div>
-
-  <!-- RZĄD 2 -->
-  <div class="thumb-loop">
-    <ul class="thumb-loop__track track-2">
-      <li><img src="img/p1.jpg"></li>
-      <li><img src="img/p2.jpg"></li>
-      <li><img src="img/p3.jpg"></li>
-      <li><img src="img/p3.jpg"></li>
-      <li><img src="img/p3.jpg"></li>
-      <li><img src="img/p3.jpg"></li>
-
-    </ul>
-  </div>
-
-</section>
-
-<script src="js/thumb-loop.js"></script>
- <script src="js/menuPortfolio.js"></script>
-
-
+  </main>
 
 
 </body>
