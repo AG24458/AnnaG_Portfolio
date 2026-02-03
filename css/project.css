@@ -164,9 +164,8 @@ h1{
 .project-grid__item--row-2{ grid-row: span 2; }
 .project-grid__item--row-3{ grid-row: span 3; }
 
-/* KLUCZ: 06 ma narzucić wysokość dwóch rzędów */
 .project-grid__item--tall-master{
-  aspect-ratio: 3 / 7; /* <-- do strojenia */
+  aspect-ratio: 3 / 7; 
 }
 
 
