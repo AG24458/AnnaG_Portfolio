@@ -336,3 +336,6 @@ figure {
   aspect-ratio: 15 / 22;
 }
 
+.lang-switch{
+  display: none;
+}
