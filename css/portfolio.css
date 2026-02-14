@@ -381,7 +381,7 @@ ul {
 
 .portfolio-more {
   padding: 96px 0 120px;
-  background: var(--bg-main);        /* jasne tło jak w projekcie */
+  background: var(--bg-main);        
 }
 
 .portfolio-more__title {
